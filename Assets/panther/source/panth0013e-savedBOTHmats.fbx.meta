@@ -1,0 +1,217 @@
+fileFormatVersion: 2
+guid: 902e2d79050bd8158801900e707dbd5e
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: arm.L
+    100002: arm.L_end
+    100004: arm.R
+    100006: arm.R_end
+    100008: armGOAL.L
+    100010: armGOAL.L_end
+    100012: armGOAL.R
+    100014: armGOAL.R_end
+    100016: back
+    100018: chest
+    100020: ear.L
+    100022: ear.L_end
+    100024: ear.R
+    100026: ear.R_end
+    100028: fingers.R
+    100030: fingers.R_end
+    100032: finngers.L
+    100034: finngers.L_end
+    100036: foot.L
+    100038: foot.R
+    100040: head
+    100042: hip.L
+    100044: hip.R
+    100046: jaw
+    100048: jaw_end
+    100050: knee.L
+    100052: knee.R
+    100054: ledGOAL.L
+    100056: ledGOAL.L_end
+    100058: ledGOAL.R
+    100060: ledGOAL.R_end
+    100062: legSOLVER.L
+    100064: legSOLVER.L_end
+    100066: legSOLVER.R
+    100068: legSOLVER.R_end
+    100070: neck
+    100072: panth.001
+    100074: //RootNode
+    100076: panthArma
+    100078: Point
+    100080: ROOT
+    100082: shoulder.L
+    100084: shoulder.R
+    100086: SUPERROOT
+    100088: tail1
+    100090: tail2
+    100092: tail3
+    100094: tail4
+    100096: tail5
+    100098: tail5_end
+    100100: TAIL6
+    100102: TAIL6_end
+    100104: tailSOLVERmid
+    100106: tailSOLVERmid_end
+    100108: toes.L
+    100110: toes.L_end
+    100112: toes.R
+    100114: toes.R_end
+    400000: arm.L
+    400002: arm.L_end
+    400004: arm.R
+    400006: arm.R_end
+    400008: armGOAL.L
+    400010: armGOAL.L_end
+    400012: armGOAL.R
+    400014: armGOAL.R_end
+    400016: back
+    400018: chest
+    400020: ear.L
+    400022: ear.L_end
+    400024: ear.R
+    400026: ear.R_end
+    400028: fingers.R
+    400030: fingers.R_end
+    400032: finngers.L
+    400034: finngers.L_end
+    400036: foot.L
+    400038: foot.R
+    400040: head
+    400042: hip.L
+    400044: hip.R
+    400046: jaw
+    400048: jaw_end
+    400050: knee.L
+    400052: knee.R
+    400054: ledGOAL.L
+    400056: ledGOAL.L_end
+    400058: ledGOAL.R
+    400060: ledGOAL.R_end
+    400062: legSOLVER.L
+    400064: legSOLVER.L_end
+    400066: legSOLVER.R
+    400068: legSOLVER.R_end
+    400070: neck
+    400072: panth.001
+    400074: //RootNode
+    400076: panthArma
+    400078: Point
+    400080: ROOT
+    400082: shoulder.L
+    400084: shoulder.R
+    400086: SUPERROOT
+    400088: tail1
+    400090: tail2
+    400092: tail3
+    400094: tail4
+    400096: tail5
+    400098: tail5_end
+    400100: TAIL6
+    400102: TAIL6_end
+    400104: tailSOLVERmid
+    400106: tailSOLVERmid_end
+    400108: toes.L
+    400110: toes.L_end
+    400112: toes.R
+    400114: toes.R_end
+    2100000: panth-red
+    4300000: panth.001
+    7400000: panthArma|jumpHor
+    7400002: panthArma|jumpUp
+    7400004: panthArma|run
+    7400006: panthArma|walkStealthy
+    9500000: //RootNode
+    10800000: Point
+    13700000: panth.001
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
