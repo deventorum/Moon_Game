@@ -38,6 +38,7 @@ public class Humanoid : MonoBehaviour
     //Implement Control Scheme
     if (isMoving)
     {
+
       isMoving = false;
     }
 
@@ -46,6 +47,7 @@ public class Humanoid : MonoBehaviour
   {
     if (isMoving)
     {
+
       isMoving = false;
     }
 
@@ -54,6 +56,7 @@ public class Humanoid : MonoBehaviour
   {
     if (isMoving)
     {
+
       isMoving = false;
     }
 
@@ -62,6 +65,7 @@ public class Humanoid : MonoBehaviour
   {
     if (isMoving)
     {
+
       isMoving = false;
     }
 
