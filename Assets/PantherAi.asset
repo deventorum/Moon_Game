@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34a7c8ca992f915438a96c2077353778, type: 3}
+  m_Name: PantherAi
+  m_EditorClassIdentifier: 
+  brickName: Assets/PantherAi.asset
+  xml: "\uFEFF<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<BehaviorBricks xmlns:ref=\"urn:padaone\"
+    version=\"1.0\">\n  <BehaviorTree id=\"0\" />\n  <runtimeInfo>\n    <BehaviorTree
+    id=\"0\" guid=\"ff34b5e9df38413bc88634591bd23a81\" nextId=\"1\">\n      <inputParams
+    />\n      <outputParams />\n      <localParams />\n    </BehaviorTree>\n  </runtimeInfo>\n
+    \ <editorInfo>\n    <BehaviorTree id=\"0\" _name=\"PantherAi\" _description=\"\"
+    _removeIfClosed=\"False\">\n      <_rootList />\n      <_nodes>\n        <nodes
+    />\n      </_nodes>\n    </BehaviorTree>\n  </editorInfo>\n</BehaviorBricks>"
+  zoom: 1
+  subslist: []
+  _guid: ff34b5e9df38413bc88634591bd23a81

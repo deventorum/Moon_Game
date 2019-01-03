@@ -129,7 +129,12 @@ ModelImporter:
     10800000: Point
     13700000: panth.001
     2186277476908879412: ImportLogs
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: panth-red
+    second: {fileID: 2100000, guid: 6176c5386ee0df5ec974278fa0ee47b3, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
@@ -274,7 +279,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
