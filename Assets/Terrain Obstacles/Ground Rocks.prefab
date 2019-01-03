@@ -1,0 +1,526 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6087761157114026082
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6087761157114026081}
+  m_Layer: 0
+  m_Name: Ground Rocks
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6087761157114026081
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6087761157114026082}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1137.2123, y: -166.98846, z: -604.7666}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7339403989955008843}
+  - {fileID: 3452141491589979759}
+  - {fileID: 4216812803203006445}
+  - {fileID: 4216812803824041228}
+  - {fileID: 3452141490910384310}
+  - {fileID: 4216812804565697721}
+  - {fileID: 4216812803915344840}
+  - {fileID: 3452141490082701426}
+  - {fileID: 4216812803960985993}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2183867496357227535
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6087761157114026081}
+    m_Modifications:
+    - target: {fileID: 868897574997816843, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_Name
+      value: Big Rock Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba, type: 3}
+--- !u!4 &7339403989955008843 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+    type: 3}
+  m_PrefabInstance: {fileID: 2183867496357227535}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6087761156601505266
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6087761157114026081}
+    m_Modifications:
+    - target: {fileID: 868897574997816843, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_Name
+      value: Big Rock Tile (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -241
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -12.200012
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba, type: 3}
+--- !u!4 &3452141490910384310 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+    type: 3}
+  m_PrefabInstance: {fileID: 6087761156601505266}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6087761156605157597
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6087761157114026081}
+    m_Modifications:
+    - target: {fileID: 6901118708192900297, guid: 31a5d718a4bd94206a655dcf4210e48c,
+        type: 3}
+      propertyPath: m_Name
+      value: Medium Rock Tile (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996478017657829716, guid: 31a5d718a4bd94206a655dcf4210e48c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1366.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996478017657829716, guid: 31a5d718a4bd94206a655dcf4210e48c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 143.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996478017657829716, guid: 31a5d718a4bd94206a655dcf4210e48c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 31a5d718a4bd94206a655dcf4210e48c, type: 3}
+--- !u!4 &4216812803960985993 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7996478017657829716, guid: 31a5d718a4bd94206a655dcf4210e48c,
+    type: 3}
+  m_PrefabInstance: {fileID: 6087761156605157597}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6087761157009359960
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6087761157114026081}
+    m_Modifications:
+    - target: {fileID: 6901118708192900297, guid: 31a5d718a4bd94206a655dcf4210e48c,
+        type: 3}
+      propertyPath: m_Name
+      value: Medium Rock Tile (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996478017657829716, guid: 31a5d718a4bd94206a655dcf4210e48c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1243.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996478017657829716, guid: 31a5d718a4bd94206a655dcf4210e48c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 141.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996478017657829716, guid: 31a5d718a4bd94206a655dcf4210e48c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 31a5d718a4bd94206a655dcf4210e48c, type: 3}
+--- !u!4 &4216812803824041228 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7996478017657829716, guid: 31a5d718a4bd94206a655dcf4210e48c,
+    type: 3}
+  m_PrefabInstance: {fileID: 6087761157009359960}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6087761157077570204
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6087761157114026081}
+    m_Modifications:
+    - target: {fileID: 6901118708192900297, guid: 31a5d718a4bd94206a655dcf4210e48c,
+        type: 3}
+      propertyPath: m_Name
+      value: Medium Rock Tile (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996478017657829716, guid: 31a5d718a4bd94206a655dcf4210e48c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1360.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996478017657829716, guid: 31a5d718a4bd94206a655dcf4210e48c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 287.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996478017657829716, guid: 31a5d718a4bd94206a655dcf4210e48c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 31a5d718a4bd94206a655dcf4210e48c, type: 3}
+--- !u!4 &4216812803915344840 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7996478017657829716, guid: 31a5d718a4bd94206a655dcf4210e48c,
+    type: 3}
+  m_PrefabInstance: {fileID: 6087761157077570204}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6087761157207358957
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6087761157114026081}
+    m_Modifications:
+    - target: {fileID: 6901118708192900297, guid: 31a5d718a4bd94206a655dcf4210e48c,
+        type: 3}
+      propertyPath: m_Name
+      value: Medium Rock Tile (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996478017657829716, guid: 31a5d718a4bd94206a655dcf4210e48c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1419.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996478017657829716, guid: 31a5d718a4bd94206a655dcf4210e48c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 129.29999
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996478017657829716, guid: 31a5d718a4bd94206a655dcf4210e48c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 31a5d718a4bd94206a655dcf4210e48c, type: 3}
+--- !u!4 &4216812804565697721 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7996478017657829716, guid: 31a5d718a4bd94206a655dcf4210e48c,
+    type: 3}
+  m_PrefabInstance: {fileID: 6087761157207358957}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6087761157264059179
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6087761157114026081}
+    m_Modifications:
+    - target: {fileID: 868897574997816843, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_Name
+      value: Big Rock Tile (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -847.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1136.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.67395246
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7387748
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -84.746
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba, type: 3}
+--- !u!4 &3452141491589979759 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+    type: 3}
+  m_PrefabInstance: {fileID: 6087761157264059179}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6087761157907207478
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6087761157114026081}
+    m_Modifications:
+    - target: {fileID: 868897574997816843, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_Name
+      value: Big Rock Tile (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1087.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1120.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.67395246
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7387748
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -84.746
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0000002
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba, type: 3}
+--- !u!4 &3452141490082701426 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8904859881320658244, guid: 3fd6eaa3ddd7745d1876fcc51bbc46ba,
+    type: 3}
+  m_PrefabInstance: {fileID: 6087761157907207478}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6087761158529156793
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6087761157114026081}
+    m_Modifications:
+    - target: {fileID: 6901118708192900297, guid: 31a5d718a4bd94206a655dcf4210e48c,
+        type: 3}
+      propertyPath: m_Name
+      value: Medium Rock Tile (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996478017657829716, guid: 31a5d718a4bd94206a655dcf4210e48c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1178.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996478017657829716, guid: 31a5d718a4bd94206a655dcf4210e48c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 145.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7996478017657829716, guid: 31a5d718a4bd94206a655dcf4210e48c,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 31a5d718a4bd94206a655dcf4210e48c, type: 3}
+--- !u!4 &4216812803203006445 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7996478017657829716, guid: 31a5d718a4bd94206a655dcf4210e48c,
+    type: 3}
+  m_PrefabInstance: {fileID: 6087761158529156793}
+  m_PrefabAsset: {fileID: 0}
