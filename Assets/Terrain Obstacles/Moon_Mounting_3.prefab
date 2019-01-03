@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8801540537538487423}
   - component: {fileID: 8801540537537193055}
   - component: {fileID: 8801540537536194207}
+  - component: {fileID: 436785736078073543}
   m_Layer: 0
   m_Name: Moon_Mounting_3
   m_TagString: Untagged
@@ -78,3 +79,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &436785736078073543
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8801540537538132063}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 14
+  m_Mesh: {fileID: 4300000, guid: 61d58efa71bf84b888592fc7820b4dcd, type: 3}
