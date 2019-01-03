@@ -43,25 +43,25 @@ MonoBehaviour:
     \     </_rootList>\n      <_nodes>\n        <nodes>\n          <ActionNode id=\"1\"
     />\n          <ActionNode id=\"2\" />\n          <SequenceNode id=\"3\" />\n          <RepeatDecorator
     id=\"4\" />\n        </nodes>\n      </_nodes>\n    </BehaviorTree>\n    <RepeatDecorator
-    id=\"4\">\n      <_data>\n        <data breakpoint=\"0\" selected=\"False\" position=\"462.375
-    90\" name=\"Repeat\" description=\"Repeats the execution of its child node\" cardinality=\"1\"
-    hasParent=\"False\">\n          <BehaviorTree id=\"0\" />\n          <RepeatDecorator
-    id=\"4\" />\n        </data>\n      </_data>\n    </RepeatDecorator>\n    <SequenceNode
-    id=\"3\">\n      <_data>\n        <data breakpoint=\"0\" selected=\"False\" position=\"453.375
-    224\" name=\"Sequence\" description=\"Executes all its children in sequence until
-    all of them are successful\" cardinality=\"-1\" hasParent=\"True\">\n          <BehaviorTree
-    id=\"0\" />\n          <SequenceNode id=\"3\" />\n          <RepeatDecorator id=\"4\"
-    />\n        </data>\n      </_data>\n    </SequenceNode>\n    <ActionNode id=\"2\">\n
-    \     <_data>\n        <data breakpoint=\"0\" selected=\"False\" position=\"278.375
-    356\" name=\"Vector3/GetRandomInArea\" description=\"Gets a random position from
-    a given area\" cardinality=\"0\" hasParent=\"True\">\n          <BehaviorTree
+    id=\"4\">\n      <_data>\n        <data breakpoint=\"0\" selected=\"False\" position=\"237.2782
+    135.5041\" name=\"Repeat\" description=\"Repeats the execution of its child node\"
+    cardinality=\"1\" hasParent=\"False\">\n          <BehaviorTree id=\"0\" />\n
+    \         <RepeatDecorator id=\"4\" />\n        </data>\n      </_data>\n    </RepeatDecorator>\n
+    \   <SequenceNode id=\"3\">\n      <_data>\n        <data breakpoint=\"0\" selected=\"False\"
+    position=\"228.2782 269.504\" name=\"Sequence\" description=\"Executes all its
+    children in sequence until all of them are successful\" cardinality=\"-1\" hasParent=\"True\">\n
+    \         <BehaviorTree id=\"0\" />\n          <SequenceNode id=\"3\" />\n          <RepeatDecorator
+    id=\"4\" />\n        </data>\n      </_data>\n    </SequenceNode>\n    <ActionNode
+    id=\"2\">\n      <_data>\n        <data breakpoint=\"0\" selected=\"False\" position=\"53.27814
+    401.504\" name=\"Vector3/GetRandomInArea\" description=\"Gets a random position
+    from a given area\" cardinality=\"0\" hasParent=\"True\">\n          <BehaviorTree
     id=\"0\" />\n          <ActionNode id=\"2\" />\n          <SequenceNode id=\"3\"
     />\n        </data>\n      </_data>\n    </ActionNode>\n    <ActionNode id=\"1\">\n
-    \     <_data>\n        <data breakpoint=\"0\" selected=\"False\" position=\"551.375
-    357.35\" name=\"Navigation/MoveToPosition\" description=\"Moves the game object
+    \     <_data>\n        <data breakpoint=\"0\" selected=\"False\" position=\"326.2782
+    402.854\" name=\"Navigation/MoveToPosition\" description=\"Moves the game object
     to a given position by using a NavMeshAgent\" cardinality=\"0\" hasParent=\"True\">\n
     \         <BehaviorTree id=\"0\" />\n          <ActionNode id=\"1\" />\n          <SequenceNode
     id=\"3\" />\n        </data>\n      </_data>\n    </ActionNode>\n  </editorInfo>\n</BehaviorBricks>"
-  zoom: 1
+  zoom: 0.8
   subslist: []
   _guid: 8adfddffa70852a45ba1b64354494e3c
