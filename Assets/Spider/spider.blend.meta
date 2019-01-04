@@ -1,0 +1,241 @@
+fileFormatVersion: 2
+guid: 9e359546c05fa4e5aa6393ca813f6776
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: joint10
+    100002: joint10_001
+    100004: joint11
+    100006: joint11_001
+    100008: joint12
+    100010: joint12_001
+    100012: joint14
+    100014: joint14_001
+    100016: joint15
+    100018: joint15_001
+    100020: joint16
+    100022: joint16_001
+    100024: joint2
+    100026: joint2_001
+    100028: joint3
+    100030: joint3_001
+    100032: joint4
+    100034: joint4_001
+    100036: joint6
+    100038: joint6_001
+    100040: joint7
+    100042: joint7_001
+    100044: joint8
+    100046: joint8_001
+    100048: Spider
+    100050: //RootNode
+    100052: Spider_Ass1_JNT
+    100054: Spider_Ass2
+    100056: Spider_Clavicle_JNT
+    100058: Spider_Head
+    100060: Spider_Hip_JNT
+    100062: Spider_L_Leg1_JNT
+    100064: Spider_L_Leg2_JNT
+    100066: Spider_L_Leg3_JNT
+    100068: Spider_L_Leg4_JNT
+    100070: Spider_R_Leg1_JNT
+    100072: Spider_R_Leg2_JNT
+    100074: Spider_R_Leg3_JNT
+    100076: Spider_R_Leg4_JNT
+    100078: Spider_Root_CTL
+    100080: Spider_Root_JNT
+    100082: SpiderMesh
+    100084: transform3
+    400000: joint10
+    400002: joint10_001
+    400004: joint11
+    400006: joint11_001
+    400008: joint12
+    400010: joint12_001
+    400012: joint14
+    400014: joint14_001
+    400016: joint15
+    400018: joint15_001
+    400020: joint16
+    400022: joint16_001
+    400024: joint2
+    400026: joint2_001
+    400028: joint3
+    400030: joint3_001
+    400032: joint4
+    400034: joint4_001
+    400036: joint6
+    400038: joint6_001
+    400040: joint7
+    400042: joint7_001
+    400044: joint8
+    400046: joint8_001
+    400048: Spider
+    400050: //RootNode
+    400052: Spider_Ass1_JNT
+    400054: Spider_Ass2
+    400056: Spider_Clavicle_JNT
+    400058: Spider_Head
+    400060: Spider_Hip_JNT
+    400062: Spider_L_Leg1_JNT
+    400064: Spider_L_Leg2_JNT
+    400066: Spider_L_Leg3_JNT
+    400068: Spider_L_Leg4_JNT
+    400070: Spider_R_Leg1_JNT
+    400072: Spider_R_Leg2_JNT
+    400074: Spider_R_Leg3_JNT
+    400076: Spider_R_Leg4_JNT
+    400078: Spider_Root_CTL
+    400080: Spider_Root_JNT
+    400082: SpiderMesh
+    400084: transform3
+    2100000: initialShadingGroup2
+    2100002: lambert1
+    4300000: SpiderMesh
+    7400000: Default Take
+    7400002: transform3_Spider_walk_cycle_BaseLayer
+    7400004: transform3_Spider_walk_cycle_BaseLayer (1)
+    9500000: //RootNode
+    13700000: SpiderMesh
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 1
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: transform3_Spider_walk_cycle_BaseLayer (1)
+      takeName: transform3_Spider_walk_cycle_BaseLayer
+      firstFrame: 1
+      lastFrame: 13
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: transform3_Spider_walk_cycle_BaseLayer
+      takeName: transform3_Spider_walk_cycle_BaseLayer
+      firstFrame: 1
+      lastFrame: 13
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
