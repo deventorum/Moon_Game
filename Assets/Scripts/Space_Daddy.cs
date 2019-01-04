@@ -41,7 +41,10 @@ public class Space_Daddy : MonoBehaviour {
             Jumping();
         }
             Flip();
-
+        if (!groundedState)
+        {
+            anim.Play("Jump_loop");
+        }
         var turn = Input.GetAxis("Horizontal");
             transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);
             controller.Move(moveDirection * Time.deltaTime);
@@ -50,13 +53,14 @@ public class Space_Daddy : MonoBehaviour {
     }
     private void FixedUpdate()
     {
-        SetGroundedState();
+        groundedState = CheckGroundCollision(colliderBoxes[0]);
+        CheckAttackCollision(colliderBoxes[1]);
+        Debug.Log(groundedState);
     }
 
     private void SetGroundedState()
     {
         groundedState = CheckGroundCollision(colliderBoxes[0]);
-        //CheckGroundCollision(colliderBoxes[0]);
         CheckAttackCollision(colliderBoxes[1]);
         Debug.Log(groundedState);
     }
@@ -69,14 +73,15 @@ public class Space_Daddy : MonoBehaviour {
         {
             foreach (Collider c in cols)
             {
-                //groundedState |= c is UnityEngine.MeshCollider;
                 Debug.Log(c.name + gameObject);
-                //groundedState = true;
-
             }
 
-            return cols.Length > 0;
         }
+        if (cols.Length > 0 && !groundedState)
+        {
+            anim.Play("Jump_end");
+        }
+        return cols.Length > 0;
     }
 
 
@@ -85,37 +90,11 @@ public class Space_Daddy : MonoBehaviour {
 
     }
 
-    //void OnTriggerEnter(Collider col)
-    //{
-    //    Debug.Log("Hit");
-    //    if (col is BoxCollider && col.name != "Stylized Astronaut")
-    //    {
-    //        if (col.gameObject.tag == "GroundCollider")
-    //        {
-    //            Debug.Log(col.gameObject.name + " colliding with " + col.name + " when rigidbody is " + col.attachedRigidbody);
-    //        }
-    //        if (col.gameObject.tag == "HurtBox")
-    //        {
-    //            Debug.Log(col.gameObject.name + " colliding with " + col.name + " when rigidbody is " + col.attachedRigidbody);
-    //        }
-    //    }
-    //    if (col.name != "Stylized Astronaut")
-    //    {
-    //        Debug.Log("Object " + name + tag + gameObject.gameObject +" has hit object "+ col.name);
-    //    }
-    //    if (null != col.gameObject.GetComponent<Sword>())
-    //    {
-    //        //do sword stuff
-    //    }
-    //}
-
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        //Check that it is being run in Play Mode, so it doesn't try to draw this in Editor mode
-            //Draw a cube where the OverlapBox is (positioned where your GameObject is as well as a size)
-            var transform1 = transform;
-            Gizmos.DrawWireCube(transform1.position, transform1.localScale / 2);
+        var transform1 = transform;
+        Gizmos.DrawWireCube(transform1.position, transform1.localScale / 2);
     }
 
     private void Jumping()
