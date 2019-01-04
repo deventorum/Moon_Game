@@ -7,8 +7,10 @@ public class PantherAi : MonoBehaviour
 {
 
   public GameObject Player;
-  public Animator animator;
-  int MoveSpeed = 4;
+  //public Animator animator;
+
+  private Rigidbody rb;
+  int MoveSpeed = 2;
   int MaxDist = 10;
   int MinDist = 5;
   private Transform t;
@@ -16,9 +18,10 @@ public class PantherAi : MonoBehaviour
 
   void Start()
   {
+    rb = GetComponent<Rigidbody>();
     trans = new GameObject().transform;
     t = Player.GetComponent<Transform>();
-    animator = GetComponent<Animator>();
+    // animator = GetComponent<Animator>();
   }
 
   void Update()
@@ -31,8 +34,8 @@ public class PantherAi : MonoBehaviour
 
     if (Vector3.Distance(this.transform.position, t.position) >= MinDist)
     {
-      animator.Play("run");
-      this.transform.position = Vector3.MoveTowards(transform.position, t.position, MoveSpeed * Time.deltaTime);
+      // animator.Play("walk");
+      rb.MovePosition(t.position);
       //this.transform.position += Vector3.up * 4f;
 
 

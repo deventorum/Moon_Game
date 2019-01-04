@@ -1,0 +1,214 @@
+fileFormatVersion: 2
+guid: 0ec78ec4ca92f5e2290dca7cd8ca5265
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Camera
+    100002: joint10
+    100004: joint10.001
+    100006: joint11
+    100008: joint11.001
+    100010: joint12
+    100012: joint12.001
+    100014: joint12.001_end
+    100016: joint12_end
+    100018: joint14
+    100020: joint14.001
+    100022: joint15
+    100024: joint15.001
+    100026: joint16
+    100028: joint16.001
+    100030: joint16.001_end
+    100032: joint16_end
+    100034: joint2
+    100036: joint2.001
+    100038: joint3
+    100040: joint3.001
+    100042: joint4
+    100044: joint4.001
+    100046: joint4.001_end
+    100048: joint4_end
+    100050: joint6
+    100052: joint6.001
+    100054: joint7
+    100056: joint7.001
+    100058: joint8
+    100060: joint8.001
+    100062: joint8.001_end
+    100064: joint8_end
+    100066: Lamp
+    100068: Spider
+    100070: //RootNode
+    100072: Spider_Ass1_JNT
+    100074: Spider_Ass2
+    100076: Spider_Ass2_end
+    100078: Spider_Clavicle_JNT
+    100080: Spider_Head
+    100082: Spider_Head_end
+    100084: Spider_Hip_JNT
+    100086: Spider_L_Leg1_JNT
+    100088: Spider_L_Leg2_JNT
+    100090: Spider_L_Leg3_JNT
+    100092: Spider_L_Leg4_JNT
+    100094: Spider_R_Leg1_JNT
+    100096: Spider_R_Leg2_JNT
+    100098: Spider_R_Leg3_JNT
+    100100: Spider_R_Leg4_JNT
+    100102: Spider_Root_CTL
+    100104: Spider_Root_JNT
+    100106: SpiderMesh
+    100108: transform3
+    400000: Camera
+    400002: joint10
+    400004: joint10.001
+    400006: joint11
+    400008: joint11.001
+    400010: joint12
+    400012: joint12.001
+    400014: joint12.001_end
+    400016: joint12_end
+    400018: joint14
+    400020: joint14.001
+    400022: joint15
+    400024: joint15.001
+    400026: joint16
+    400028: joint16.001
+    400030: joint16.001_end
+    400032: joint16_end
+    400034: joint2
+    400036: joint2.001
+    400038: joint3
+    400040: joint3.001
+    400042: joint4
+    400044: joint4.001
+    400046: joint4.001_end
+    400048: joint4_end
+    400050: joint6
+    400052: joint6.001
+    400054: joint7
+    400056: joint7.001
+    400058: joint8
+    400060: joint8.001
+    400062: joint8.001_end
+    400064: joint8_end
+    400066: Lamp
+    400068: Spider
+    400070: //RootNode
+    400072: Spider_Ass1_JNT
+    400074: Spider_Ass2
+    400076: Spider_Ass2_end
+    400078: Spider_Clavicle_JNT
+    400080: Spider_Head
+    400082: Spider_Head_end
+    400084: Spider_Hip_JNT
+    400086: Spider_L_Leg1_JNT
+    400088: Spider_L_Leg2_JNT
+    400090: Spider_L_Leg3_JNT
+    400092: Spider_L_Leg4_JNT
+    400094: Spider_R_Leg1_JNT
+    400096: Spider_R_Leg2_JNT
+    400098: Spider_R_Leg3_JNT
+    400100: Spider_R_Leg4_JNT
+    400102: Spider_Root_CTL
+    400104: Spider_Root_JNT
+    400106: SpiderMesh
+    400108: transform3
+    2000000: Camera
+    2100000: initialShadingGroup2
+    2100002: lambert1
+    4300000: SpiderMesh
+    7400000: Spider|moving
+    7400002: Spider|moving.001
+    7400004: transform3|moving
+    7400006: transform3|moving.001
+    7400008: transform3|still
+    7400010: transform3|transform3|Spider_walk_cycle|BaseLayer
+    9500000: //RootNode
+    10800000: Lamp
+    13700000: SpiderMesh
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
