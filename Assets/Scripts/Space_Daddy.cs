@@ -16,8 +16,9 @@ public class Space_Daddy : MonoBehaviour {
     public Vector3 jump;
     bool groundedState;
     public Collider[] colliderBoxes;
+    private static readonly int AnimationPar = Animator.StringToHash("AnimationPar");
 
-    void Start () {
+    private void Start () {
         controller = GetComponent <CharacterController>();
         anim = gameObject.GetComponentInChildren<Animator>();
         animate = gameObject.GetComponentInChildren<Animation>();
@@ -28,20 +29,11 @@ public class Space_Daddy : MonoBehaviour {
 
         if (Input.GetKey ("w") || Input.GetKey("s"))
         {
-
-            if (anim.GetCurrentAnimatorStateInfo(0).IsName("Run"))
-            {
-                // do something
-                anim.SetInteger("AnimationPar", 0);
-            }
-            else
-            {
-                anim.SetInteger("AnimationPar", 1);
-            }
+            anim.SetInteger(AnimationPar, anim.GetCurrentAnimatorStateInfo(0).IsName("Run") ? 0 : 1);
         }
         else
         {
-            anim.SetInteger("AnimationPar", 0);
+            anim.SetInteger(AnimationPar, 0);
         }
         if(groundedState)
         {
@@ -50,13 +42,13 @@ public class Space_Daddy : MonoBehaviour {
         }
             Flip();
 
-        float turn = Input.GetAxis("Horizontal");
+        var turn = Input.GetAxis("Horizontal");
             transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);
             controller.Move(moveDirection * Time.deltaTime);
             moveDirection.y -= gravity * Time.deltaTime;
     
     }
-    void FixedUpdate()
+    private void FixedUpdate()
     {
         SetGroundedState();
     }
@@ -72,7 +64,8 @@ public class Space_Daddy : MonoBehaviour {
 
     private bool CheckGroundCollision(Collider col)
     {
-        Collider[] cols = Physics.OverlapBox(col.transform.position, col.transform.localScale / 2, Quaternion.identity, LayerMask.GetMask("Terrain", "Base"));
+        var transform1 = col.transform;
+        Collider[] cols = Physics.OverlapBox(transform1.position, transform1.localScale / 2, Quaternion.identity, LayerMask.GetMask("Terrain", "Base"));
         {
             foreach (Collider c in cols)
             {
@@ -82,13 +75,7 @@ public class Space_Daddy : MonoBehaviour {
 
             }
 
-            if (cols.Length > 0)
-            {
-                return true;
-            }
-
-            return false;
-
+            return cols.Length > 0;
         }
     }
 
@@ -127,16 +114,15 @@ public class Space_Daddy : MonoBehaviour {
         Gizmos.color = Color.red;
         //Check that it is being run in Play Mode, so it doesn't try to draw this in Editor mode
             //Draw a cube where the OverlapBox is (positioned where your GameObject is as well as a size)
-            Gizmos.DrawWireCube(transform.position, transform.localScale / 2);
+            var transform1 = transform;
+            Gizmos.DrawWireCube(transform1.position, transform1.localScale / 2);
     }
 
     private void Jumping()
     {
-        if (Input.GetKeyDown("space"))
-        {
-            anim.Play("Jump_start");
-            moveDirection.y += jumpForce;
-        }
+        if (!Input.GetKeyDown("space")) return;
+        anim.Play("Jump_start");
+        moveDirection.y += jumpForce;
     }
     private void Flip()
     {
