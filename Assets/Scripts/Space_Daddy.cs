@@ -14,7 +14,7 @@ public class Space_Daddy : MonoBehaviour {
     private Vector3 moveDirection = Vector3.zero;
     public float gravity = 20.0f;
     public Vector3 jump;
-    bool groundedState;
+    private bool groundedState;
     public Collider[] colliderBoxes;
     private static readonly int AnimationPar = Animator.StringToHash("AnimationPar");
 
@@ -25,7 +25,7 @@ public class Space_Daddy : MonoBehaviour {
         groundedState = CheckGroundCollision(colliderBoxes[0]);
     }
 
-    void Update (){
+    private void Update (){
 
         if (Input.GetKey ("w") || Input.GetKey("s"))
         {
