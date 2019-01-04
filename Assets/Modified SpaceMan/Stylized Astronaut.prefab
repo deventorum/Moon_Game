@@ -40,7 +40,7 @@ BoxCollider:
   m_GameObject: {fileID: 651569060767589217}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.15573327, y: 0.17095087, z: 0.33162123}
   m_Center: {x: 0.0012002459, y: 0.14220166, z: 0.08488903}
@@ -53,9 +53,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6109849778635161835}
-  - component: {fileID: 2491147552162841449}
   - component: {fileID: 8413900388921030225}
   - component: {fileID: 3444746721060077369}
+  - component: {fileID: 2476930171377573738}
   m_Layer: 0
   m_Name: GroundCollider
   m_TagString: GroundCollider
@@ -71,25 +71,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4848844315251205809}
   m_LocalRotation: {x: 0.000000057742, y: -0.29012966, z: 0.000000024214387, w: 0.9569874}
-  m_LocalPosition: {x: -9.64, y: -0.808, z: -10.972}
+  m_LocalPosition: {x: -9.64, y: -0.781, z: -10.972}
   m_LocalScale: {x: 0.70936793, y: 0.70936793, z: 0.70936793}
   m_Children: []
   m_Father: {fileID: 3220773734204071617}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0.40100002, y: 93.579, z: -6.387}
---- !u!65 &2491147552162841449
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4848844315251205809}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.40420103, y: 0.03306615, z: 0.770172}
-  m_Center: {x: -0.06320301, y: -0.53931665, z: -0.114913985}
 --- !u!114 &8413900388921030225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,6 +126,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &2476930171377573738
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4848844315251205809}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4990019569345470490
 GameObject:
   m_ObjectHideFlags: 0
@@ -1157,7 +1157,6 @@ GameObject:
   - component: {fileID: 4993644811707017696}
   - component: {fileID: 4904807982690301418}
   - component: {fileID: 4953571957254265530}
-  - component: {fileID: 4991069462761766935}
   - component: {fileID: 4991069462761766931}
   m_Layer: 0
   m_Name: Stylized Astronaut
@@ -1222,22 +1221,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.125, z: -0.01}
---- !u!54 &4991069462761766935
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4992175196469410334}
-  serializedVersion: 2
-  m_Mass: 500
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &4991069462761766931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1256,7 +1239,7 @@ MonoBehaviour:
   gravity: 20
   jump: {x: 0, y: 0, z: 0}
   colliderBoxes:
-  - {fileID: 2491147552162841449}
+  - {fileID: 2476930171377573738}
   - {fileID: 6816454227286587139}
 --- !u!1 &4992175479913103710
 GameObject:
