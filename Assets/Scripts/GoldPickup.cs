@@ -19,7 +19,8 @@ public class GoldPickup : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            FindObjectOfType<GameManager1>().AddGold(value);
+            Debug.Log("1");
+            FindObjectOfType<GameManager>().AddGold(value);
 
             Destroy(gameObject);
         }
