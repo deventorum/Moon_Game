@@ -71,8 +71,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4848844315251205809}
   m_LocalRotation: {x: 0.000000057742, y: -0.29012966, z: 0.000000024214387, w: 0.9569874}
-  m_LocalPosition: {x: -9.64, y: -0.781, z: -10.972}
-  m_LocalScale: {x: 0.70936793, y: 0.70936793, z: 0.70936793}
+  m_LocalPosition: {x: -9.64, y: -0.823, z: -10.972}
+  m_LocalScale: {x: 0.7324018, y: 0.7324018, z: 0.7324018}
   m_Children: []
   m_Father: {fileID: 3220773734204071617}
   m_RootOrder: 0
@@ -1236,6 +1236,7 @@ MonoBehaviour:
   jumpForce: 20
   speed: 20
   turnSpeed: 100
+  sidewayControl: 20
   gravity: 20
   jump: {x: 0, y: 0, z: 0}
   colliderBoxes:
