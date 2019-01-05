@@ -133,7 +133,12 @@ public class Space_Daddy : MonoBehaviour {
 
     private void CheckAttackCollision(Collider col)
     {
-
+        var transform1 = col.transform;
+        Collider[] cols = Physics.OverlapBox(transform1.position, transform1.localScale / 2, Quaternion.identity, LayerMask.GetMask("Enemy"));
+        foreach (Collider c in cols)
+        {
+            Debug.Log("Attacked by fox");
+        }
     }
 
     void OnDrawGizmosSelected()

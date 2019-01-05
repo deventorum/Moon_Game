@@ -34,7 +34,7 @@ public class PantherAi : MonoBehaviour
     var rot = Quaternion.Euler(0, ang, 0);
     trans.SetPositionAndRotation(position, rot);
     transform.LookAt(trans);
-    Debug.Log(Vector3.Distance(rb.position, playerCol.transform.position));
+    // Debug.Log(Vector3.Distance(rb.position, playerCol.transform.position));
 
     var position1 = rb.position;
     var pos2 = t.position;
