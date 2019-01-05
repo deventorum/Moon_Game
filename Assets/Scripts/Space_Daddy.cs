@@ -4,65 +4,74 @@ using System.Collections;
 
 public class Space_Daddy : MonoBehaviour {
     private Animator anim;
-    private Rigidbody rigidBody;
-    private CharacterController controller;
-    [SerializeField] float jumpForce = 20f;
-
-    private Vector3 jumpVelocity = Vector3.zero;
-    private Vector3 sideManeuring = Vector3.zero;
-
-    public float speed = 600.0f;
+    private Rigidbody rb;
     public float turnSpeed = 400.0f;
-    public float sidewayControl = 20.0f;
-
+    private bool groundedState;
     //private Vector3 moveDirection = Vector3.zero;
 
 
     public float gravity = 20.0f;
     public Vector3 jump;
-    private bool groundedState;
+    
     public Collider[] colliderBoxes;
     private static readonly int AnimationPar = Animator.StringToHash("AnimationPar");
     private 
 
-    void Start () {
-        controller = GetComponent <CharacterController>();
-        anim = gameObject.GetComponentInChildren<Animator>();
-        groundedState = CheckGroundCollision(colliderBoxes[0]);
+    void Start ()
+    {
+        rb = GetComponent<Rigidbody>();
+        anim = GetComponentInChildren<Animator>();
     }
 
-    private void Update (){
-
-
+    private void FixedUpdate (){
+    
+        groundedState = CheckGroundCollision(colliderBoxes[0]);
+        CheckAttackCollision(colliderBoxes[1]);
+        Debug.Log(groundedState);
 
         if (Input.GetKey ("w") || Input.GetKey("s"))
         {
             anim.SetInteger(AnimationPar, 1);
+            
         }
         else
         {
             anim.SetInteger(AnimationPar, 0);
         }
 
-        
-        Vector3 moveDirection = new Vector3(0, 0, Input.GetAxis("Vertical"));
-        moveDirection = transform.TransformDirection(moveDirection);
-
-        if (groundedState)
+        if (Input.GetKeyDown("f") && !groundedState)
         {
-            moveDirection *= speed;
+            Flip();
+        }
+
+        Jump(groundedState);
+        var turn = Input.GetAxis("Horizontal");
+        if (Math.Abs(turn) < 0.1f)
+        {
+            Turn(turn);
+        }
+       
+    }
+
+    private void Turn(float turn)
+    {
+        transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);
+
+    }
+    private void Flip()
+    {
+        
+            anim.Play("Flip");
+    }
+
+    private void Jump(bool isGrounded)
+    {
+        if (isGrounded)
+        {
             if (Input.GetKeyDown("space"))
             {
-                jumpVelocity = moveDirection;
-                jumpVelocity.y = jumpForce;
+                //jumpVelocity.y = jumpForce;
                 anim.Play("Jump_start");
-            }
-            else
-            {
-                //sideManeuring = moveDirection;
-                //sideManeuring.x = sidewayControl;
-                jumpVelocity = Vector3.zero;
-
             }
         }
         else
@@ -71,47 +80,11 @@ public class Space_Daddy : MonoBehaviour {
             {
                 anim.Play("Jump_loop");
             }
-            moveDirection *= speed / 2;
-            jumpVelocity.y -= gravity * Time.deltaTime;
+            
         }
-        Flip();
-        var turn = Input.GetAxis("Horizontal");
-        transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);
-        controller.Move((moveDirection + jumpVelocity) * Time.deltaTime);
-
-        //if (groundedState)
-        //{
-
-        //    moveDirection = transform.forward * Input.GetAxis("Vertical") * speed;
-        //    Jumping();
-        //}
-        //    Flip();
-        //if (!groundedState)
-        //{
-        //    if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Flip"))
-        //    {
-        //        anim.Play("Jump_loop");
-        //    }
-        //}
-        //var turn = Input.GetAxis("Horizontal");
-            //transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);
-            //controller.Move(moveDirection * Time.deltaTime);
-            //moveDirection.y -= gravity * Time.deltaTime;
-    
-    }
-    private void FixedUpdate()
-    {
-        groundedState = CheckGroundCollision(colliderBoxes[0]);
-        CheckAttackCollision(colliderBoxes[1]);
-        Debug.Log(groundedState);
     }
 
-    private void SetGroundedState()
-    {
-        groundedState = CheckGroundCollision(colliderBoxes[0]);
-        CheckAttackCollision(colliderBoxes[1]);
-        Debug.Log(groundedState);
-    }
+
 
 
     private bool CheckGroundCollision(Collider col)
@@ -154,15 +127,10 @@ public class Space_Daddy : MonoBehaviour {
     //    anim.Play("Jump_start");
     //    moveDirection.y += jumpForce;
     //}
-    private void Flip()
-    {
-        if (Input.GetKeyDown("f") && !groundedState)
-        {
-            anim.Play("Flip");
-        }
-    }
+   
     protected void LateUpdate()
     {
-        transform.localEulerAngles = new Vector3(0, transform.localEulerAngles.y, 0);
+        var transform1 = transform;
+        transform1.localEulerAngles = new Vector3(0, transform1.localEulerAngles.y, 0);
     }
 }
