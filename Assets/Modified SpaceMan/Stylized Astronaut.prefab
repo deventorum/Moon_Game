@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 899628267000900387}
   - component: {fileID: 6816454227286587139}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: HurtBoxCollider
   m_TagString: HurtBox
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 8413900388921030225}
   - component: {fileID: 3444746721060077369}
   - component: {fileID: 2476930171377573738}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: GroundCollider
   m_TagString: GroundCollider
   m_Icon: {fileID: 0}
@@ -148,7 +148,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4995513282070061204}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Foot_2_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4995194476144381858}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Foot_2_Left_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -209,7 +209,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4995410141062503076}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Armature
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 4991069463659221914}
   - component: {fileID: 4991069463659221893}
   - component: {fileID: 4991069463659221892}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -322,7 +322,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4993740650140735326}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Arm_2_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -353,7 +353,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4993471008784862278}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Body_Upper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -388,7 +388,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4995138575242747756}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: IK_Foot_Right_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -418,7 +418,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4993552414655660614}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Foot_2_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -449,7 +449,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4995348716666968374}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Foot_2_Right_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -479,7 +479,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4993650449230196710}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Root
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -514,7 +514,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4995539149165667244}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -545,7 +545,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4995269001042253892}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Arm_2_Right_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -575,7 +575,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4995375836632349826}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Head_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -605,7 +605,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4993840779536758016}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: IK_Arm_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -636,7 +636,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4995617012303229444}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: IK_Foot_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -667,7 +667,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4995547319306585316}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Foot_1_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -698,7 +698,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4993546314670141384}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Arm_1_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -730,7 +730,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4995490529763132246}
   - component: {fileID: 4948066921787415954}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -826,7 +826,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4995472313069101390}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Arm_1_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -857,7 +857,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4993529117640984360}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: IK_Foot_Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -893,7 +893,7 @@ GameObject:
   - component: {fileID: 4969995817251843956}
   - component: {fileID: 4925876611895931348}
   - component: {fileID: 4960021882233520184}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Player_Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -1004,7 +1004,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4993727088548557278}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: IK_Foot_Left_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1034,7 +1034,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4995428858959266340}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: IK_Arm_Right_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1064,7 +1064,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4993608131774959030}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: IK_Arm_Left_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1094,7 +1094,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4993759502123320580}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Arm_2_Left_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1124,7 +1124,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4995518468059599218}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Foot_1_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1158,7 +1158,7 @@ GameObject:
   - component: {fileID: 4904807982690301418}
   - component: {fileID: 4953571957254265530}
   - component: {fileID: 4991069462761766931}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Stylized Astronaut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1250,7 +1250,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4995338135317199196}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Arm_2_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1281,7 +1281,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4995599644688201882}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: IK_Arm_Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1312,7 +1312,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3220773734204071617}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
