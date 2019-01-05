@@ -11,15 +11,15 @@ public class PantherAi : MonoBehaviour
 
   public float speed;
 
-  private Rigidbody playerRb;
+  private Collider playerCol;
   private Rigidbody rb;
-  int MinDist = 30;
+  public int MinDist = 30;
   private Transform t;
   private Transform trans;
 
   private void Start()
   {
-    playerRb = Player.GetComponent<Rigidbody>();
+    playerCol = Player.GetComponent<BoxCollider>();
     rb = GetComponent<Rigidbody>();
     trans = new GameObject().transform;
     t = Player.GetComponent<Transform>();
@@ -34,7 +34,7 @@ public class PantherAi : MonoBehaviour
     var rot = Quaternion.Euler(0, ang, 0);
     trans.SetPositionAndRotation(position, rot);
     transform.LookAt(trans);
-    Debug.Log(Vector3.Distance(rb.position, playerRb.position));
+    Debug.Log(Vector3.Distance(rb.position, playerCol.transform.position));
 
     var position1 = rb.position;
     var pos2 = t.position;
@@ -44,7 +44,7 @@ public class PantherAi : MonoBehaviour
     
     if ((Vector2.Distance(cur, pla) - MinDist) >= 0)
     {
-      animator.Play("Walk");
+      animator.Play("Run");
       MoveTowards();
     }
     else if ((Vector2.Distance(cur, pla) - MinDist) < 0)
