@@ -520,7 +520,16 @@ PlayerSettings:
   webGLCompressionFormat: 1
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
-  scriptingDefineSymbols: {}
+  scriptingDefineSymbols:
+    1: PROBUILDER_FBX_PLUGIN_ENABLED
+    7: PROBUILDER_FBX_PLUGIN_ENABLED
+    13: PROBUILDER_FBX_PLUGIN_ENABLED
+    19: PROBUILDER_FBX_PLUGIN_ENABLED
+    21: PROBUILDER_FBX_PLUGIN_ENABLED
+    25: PROBUILDER_FBX_PLUGIN_ENABLED
+    26: PROBUILDER_FBX_PLUGIN_ENABLED
+    27: PROBUILDER_FBX_PLUGIN_ENABLED
+    28: PROBUILDER_FBX_PLUGIN_ENABLED
   platformArchitecture: {}
   scriptingBackend: {}
   il2cppCompilerConfiguration: {}
