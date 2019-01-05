@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34a7c8ca992f915438a96c2077353778, type: 3}
+  m_Name: PantherAi
+  m_EditorClassIdentifier: 
+  brickName: Assets/PantherAi.asset
+  xml: "\uFEFF<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<BehaviorBricks xmlns:ref=\"urn:padaone\"
+    version=\"1.0\">\n  <BehaviorTree id=\"0\" />\n  <runtimeInfo>\n    <BehaviorTree
+    id=\"0\" guid=\"ff34b5e9df38413bc88634591bd23a81\" nextId=\"8\">\n      <root>\n
+    \       <RepeatUntilSuccess id=\"1\" />\n      </root>\n      <inputParams>\n
+    \       <inputValues>\n          <entry name=\"target\" type=\"UnityEngine.GameObject\"
+    isBlackboard=\"False\" />\n        </inputValues>\n      </inputParams>\n      <outputParams
+    />\n      <localParams />\n    </BehaviorTree>\n    <RepeatUntilSuccess id=\"1\">\n
+    \     <child>\n        <SequenceNode id=\"3\" />\n      </child>\n      <inputParams
+    />\n      <outputParams />\n      <localParams />\n    </RepeatUntilSuccess>\n
+    \   <SequenceNode id=\"3\">\n      <children>\n        <elem>\n          <ActionNode
+    id=\"4\" />\n        </elem>\n        <elem>\n          <ActionNode id=\"6\" />\n
+    \       </elem>\n      </children>\n      <inputParams />\n      <outputParams
+    />\n      <localParams />\n    </SequenceNode>\n    <ActionNode id=\"4\" action=\"Navigation/MoveToGameObject\">\n
+    \     <inputParams>\n        <inputValues>\n          <entry name=\"target\" type=\"UnityEngine.GameObject\"
+    isBlackboard=\"True\" blackboard=\"target\" />\n        </inputValues>\n      </inputParams>\n
+    \     <outputParams />\n      <localParams />\n    </ActionNode>\n    <ActionNode
+    id=\"6\" action=\"Basic/WaitForSeconds\">\n      <inputParams>\n        <inputValues>\n
+    \         <entry name=\"seconds\" type=\"System.Single\" isBlackboard=\"False\"
+    value=\"5\" />\n        </inputValues>\n      </inputParams>\n      <outputParams
+    />\n      <localParams />\n    </ActionNode>\n  </runtimeInfo>\n  <editorInfo>\n
+    \   <BehaviorTree id=\"0\" _name=\"PantherAi\" _description=\"\" _removeIfClosed=\"False\">\n
+    \     <_rootList>\n        <elem>\n          <RepeatUntilSuccess id=\"1\" />\n
+    \       </elem>\n        <elem>\n          <SequenceNode id=\"3\" />\n        </elem>\n
+    \       <elem>\n          <ActionNode id=\"4\" />\n        </elem>\n        <elem>\n
+    \         <ActionNode id=\"6\" />\n        </elem>\n      </_rootList>\n      <_nodes>\n
+    \       <nodes>\n          <RepeatUntilSuccess id=\"1\" />\n          <SequenceNode
+    id=\"3\" />\n          <ActionNode id=\"4\" />\n          <ActionNode id=\"6\"
+    />\n        </nodes>\n      </_nodes>\n    </BehaviorTree>\n    <RepeatUntilSuccess
+    id=\"1\">\n      <_data>\n        <data breakpoint=\"0\" selected=\"False\" position=\"202.4921
+    -76.18781\" name=\"Repeat Until Success\" description=\"Repeats the execution
+    of its child node until it success\" cardinality=\"1\" hasParent=\"False\">\n
+    \         <BehaviorTree id=\"0\" />\n          <RepeatUntilSuccess id=\"1\" />\n
+    \       </data>\n      </_data>\n    </RepeatUntilSuccess>\n    <SequenceNode
+    id=\"3\">\n      <_data>\n        <data breakpoint=\"0\" selected=\"False\" position=\"244.239
+    44.67957\" name=\"Sequence\" description=\"Executes all its children in sequence
+    until all of them are successful\" cardinality=\"-1\" hasParent=\"True\">\n          <BehaviorTree
+    id=\"0\" />\n          <SequenceNode id=\"3\" />\n          <RepeatUntilSuccess
+    id=\"1\" />\n        </data>\n      </_data>\n    </SequenceNode>\n    <ActionNode
+    id=\"4\">\n      <_data>\n        <data breakpoint=\"0\" selected=\"False\" position=\"-6.380154
+    179.7746\" name=\"Navigation/MoveToGameObject\" description=\"Moves the game object
+    towards a given target by using a NavMeshAgent\" cardinality=\"0\" hasParent=\"True\">\n
+    \         <BehaviorTree id=\"0\" />\n          <ActionNode id=\"4\" />\n          <SequenceNode
+    id=\"3\" />\n        </data>\n      </_data>\n    </ActionNode>\n    <ActionNode
+    id=\"6\">\n      <_data>\n        <data breakpoint=\"0\" selected=\"False\" position=\"443.4879
+    183.6124\" name=\"Basic/WaitForSeconds\" description=\"Action that success after
+    a period of time.\" cardinality=\"0\" hasParent=\"True\">\n          <BehaviorTree
+    id=\"0\" />\n          <ActionNode id=\"6\" />\n          <SequenceNode id=\"3\"
+    />\n        </data>\n      </_data>\n    </ActionNode>\n  </editorInfo>\n</BehaviorBricks>"
+  zoom: 1
+  subslist: []
+  _guid: ff34b5e9df38413bc88634591bd23a81

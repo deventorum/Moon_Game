@@ -3,6 +3,100 @@ guid: dfb643aa3bdcf0d27a1c961dae999789
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
+    100000: arm_L
+    100002: arm_R
+    100004: armGOAL_L
+    100006: armGOAL_R
+    100008: back
+    100010: chest
+    100012: ear_L
+    100014: ear_R
+    100016: fingers_R
+    100018: finngers_L
+    100020: foot_L
+    100022: foot_R
+    100024: head
+    100026: hip_L
+    100028: hip_R
+    100030: jaw
+    100032: knee_L
+    100034: knee_R
+    100036: ledGOAL_L
+    100038: ledGOAL_R
+    100040: legSOLVER_L
+    100042: legSOLVER_R
+    100044: neck
+    100046: //RootNode
+    100048: panth_001
+    100050: panthArma
+    100052: ROOT
+    100054: shoulder_L
+    100056: shoulder_R
+    100058: SUPERROOT
+    100060: tail1
+    100062: tail2
+    100064: tail3
+    100066: tail4
+    100068: tail5
+    100070: TAIL6
+    100072: tailSOLVERmid
+    100074: toes_L
+    100076: toes_R
+    400000: arm_L
+    400002: arm_R
+    400004: armGOAL_L
+    400006: armGOAL_R
+    400008: back
+    400010: chest
+    400012: ear_L
+    400014: ear_R
+    400016: fingers_R
+    400018: finngers_L
+    400020: foot_L
+    400022: foot_R
+    400024: head
+    400026: hip_L
+    400028: hip_R
+    400030: jaw
+    400032: knee_L
+    400034: knee_R
+    400036: ledGOAL_L
+    400038: ledGOAL_R
+    400040: legSOLVER_L
+    400042: legSOLVER_R
+    400044: neck
+    400046: //RootNode
+    400048: panth_001
+    400050: panthArma
+    400052: ROOT
+    400054: shoulder_L
+    400056: shoulder_R
+    400058: SUPERROOT
+    400060: tail1
+    400062: tail2
+    400064: tail3
+    400066: tail4
+    400068: tail5
+    400070: TAIL6
+    400072: tailSOLVERmid
+    400074: toes_L
+    400076: toes_R
+    2100000: panth-red__UVpanth0015_red_png
+    4300000: panth_001
+    7400000: Default Take
+    7400002: all
+    7400004: getsUp
+    7400006: idle
+    7400008: jumpHor
+    7400010: jumpHor_noLoop
+    7400012: jumpUp
+    7400014: run
+    7400016: sits
+    7400018: sitsDwn
+    7400020: walkReg
+    7400022: walkStealthy
+    9500000: //RootNode
+    13700000: panth_001
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
@@ -57,7 +151,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 0
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0

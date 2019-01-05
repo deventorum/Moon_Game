@@ -9,7 +9,7 @@
         "launchAfterInstallation": true,
         "HideSendToUnityMenu": true,
         "BakeAnimation": true,
-        "IntegrationSavePath": "/Users/denystkachuk/Lighthouse/Unity Repos/MoonGame",
+        "IntegrationSavePath": "/home/toni/Desktop/Moon_Game",
         "selectedDCCApp": 0,
         "prefabSavePaths": [
             "."
@@ -22,7 +22,7 @@
         "dccOptionNames": [],
         "dccOptionPaths": [],
         "exportModelSettingsSerialize": {
-            "exportFormat": 1,
+            "exportFormat": 0,
             "rootMotionTransfer": "",
             "animatedSkinnedMesh": false,
             "mayaCompatibleNaming": true,
