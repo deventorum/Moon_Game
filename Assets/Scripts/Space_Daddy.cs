@@ -1,8 +1,10 @@
 using System;
 using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
-public class Space_Daddy : MonoBehaviour {
+public class Space_Daddy : MonoBehaviour
+{
     private Animator anim;
     private Rigidbody rigidBody;
     private CharacterController controller;
@@ -17,25 +19,28 @@ public class Space_Daddy : MonoBehaviour {
 
     //private Vector3 moveDirection = Vector3.zero;
 
+    private const int TOTAL_LIVES = 3;
+    public int livesRemaining;
+
 
     public float gravity = 20.0f;
     public Vector3 jump;
     private bool groundedState;
     public Collider[] colliderBoxes;
     private static readonly int AnimationPar = Animator.StringToHash("AnimationPar");
-    private 
 
-    void Start () {
-        controller = GetComponent <CharacterController>();
+
+    void Start()
+    {
+        livesRemaining = 3;
+        controller = GetComponent<CharacterController>();
         anim = gameObject.GetComponentInChildren<Animator>();
         groundedState = CheckGroundCollision(colliderBoxes[0]);
     }
 
-    private void Update (){
-
-
-
-        if (Input.GetKey ("w") || Input.GetKey("s"))
+    private void Update()
+    {
+        if (Input.GetKey("w") || Input.GetKey("s"))
         {
             anim.SetInteger(AnimationPar, 1);
         }
@@ -44,7 +49,7 @@ public class Space_Daddy : MonoBehaviour {
             anim.SetInteger(AnimationPar, 0);
         }
 
-        
+
         Vector3 moveDirection = new Vector3(0, 0, Input.GetAxis("Vertical"));
         moveDirection = transform.TransformDirection(moveDirection);
 
@@ -94,11 +99,19 @@ public class Space_Daddy : MonoBehaviour {
         //    }
         //}
         //var turn = Input.GetAxis("Horizontal");
-            //transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);
-            //controller.Move(moveDirection * Time.deltaTime);
-            //moveDirection.y -= gravity * Time.deltaTime;
-    
+        //transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);
+        //controller.Move(moveDirection * Time.deltaTime);
+        //moveDirection.y -= gravity * Time.deltaTime;
+
+        // TODO - Add life handling method here
+
+        if (livesRemaining == 0)
+        {
+            GameController.Instance.GameOver();
+        }
+
     }
+
     private void FixedUpdate()
     {
         groundedState = CheckGroundCollision(colliderBoxes[0]);
@@ -165,4 +178,17 @@ public class Space_Daddy : MonoBehaviour {
     {
         transform.localEulerAngles = new Vector3(0, transform.localEulerAngles.y, 0);
     }
+
+    /** 
+     * Scene management is closely tied to the life of space daddy, so scene
+     * management is included here
+    */
+
+    private void SceneController()
+    {
+        SceneManager.LoadScene("GameOver");
+    }
+
 }
+
+
