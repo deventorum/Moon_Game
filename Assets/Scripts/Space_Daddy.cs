@@ -1,23 +1,21 @@
 using System;
 using UnityEngine;
-using System.Collections;
+
 
 public class Space_Daddy : MonoBehaviour {
     private Animator anim;
     private Rigidbody rb;
     public float turnSpeed = 400.0f;
     private bool groundedState;
+    public float jumpForce;
+    public float forwardForce;
     //private Vector3 moveDirection = Vector3.zero;
 
 
-    public float gravity = 20.0f;
-    public Vector3 jump;
-    
     public Collider[] colliderBoxes;
     private static readonly int AnimationPar = Animator.StringToHash("AnimationPar");
-    private 
 
-    void Start ()
+    private void Start ()
     {
         rb = GetComponent<Rigidbody>();
         anim = GetComponentInChildren<Animator>();
@@ -29,14 +27,21 @@ public class Space_Daddy : MonoBehaviour {
         CheckAttackCollision(colliderBoxes[1]);
         Debug.Log(groundedState);
 
-        if (Input.GetKey ("w") || Input.GetKey("s"))
+        if (Input.GetAxis("Vertical") != 0)
         {
+            //Debug.Log(Input.GetAxis("Vertical"));
             anim.SetInteger(AnimationPar, 1);
-            
+            rb.AddRelativeForce(0,0,forwardForce * Input.GetAxis("Vertical"), ForceMode.VelocityChange);
         }
         else
         {
             anim.SetInteger(AnimationPar, 0);
+            if (groundedState)
+            {
+                rb.AddRelativeForce(Vector3.zero);
+                rb.velocity = new Vector3(0,rb.velocity.y,0);
+                
+            }
         }
 
         if (Input.GetKeyDown("f") && !groundedState)
@@ -45,10 +50,14 @@ public class Space_Daddy : MonoBehaviour {
         }
 
         Jump(groundedState);
-        var turn = Input.GetAxis("Horizontal");
-        if (Math.Abs(turn) < 0.1f)
+        if (Input.GetAxis("Horizontal") != 0)
         {
-            Turn(turn);
+            rb.constraints = RigidbodyConstraints.None;
+            Turn(Input.GetAxis("Horizontal"));
+        }
+        else
+        {
+            rb.constraints = RigidbodyConstraints.FreezeRotationY;
         }
        
     }
@@ -70,7 +79,7 @@ public class Space_Daddy : MonoBehaviour {
         {
             if (Input.GetKeyDown("space"))
             {
-                //jumpVelocity.y = jumpForce;
+                rb.AddForce(0,jumpForce * Time.deltaTime,0,ForceMode.VelocityChange);
                 anim.Play("Jump_start");
             }
         }
@@ -83,9 +92,6 @@ public class Space_Daddy : MonoBehaviour {
             
         }
     }
-
-
-
 
     private bool CheckGroundCollision(Collider col)
     {
@@ -114,19 +120,12 @@ public class Space_Daddy : MonoBehaviour {
         }
     }
 
-    void OnDrawGizmosSelected()
+    private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         var transform1 = transform;
         Gizmos.DrawWireCube(transform1.position, transform1.localScale / 2);
     }
-
-    //private void Jumping()
-    //{
-    //    if (!Input.GetKeyDown("space")) return;
-    //    anim.Play("Jump_start");
-    //    moveDirection.y += jumpForce;
-    //}
    
     protected void LateUpdate()
     {

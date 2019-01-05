@@ -134,7 +134,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4848844315251205809}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1156,9 +1156,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4993644811707017696}
   - component: {fileID: 4904807982690301418}
-  - component: {fileID: 4953571957254265530}
-  - component: {fileID: 4991069462761766931}
+  - component: {fileID: 1307425950725672433}
   - component: {fileID: 8045666848187038132}
+  - component: {fileID: 4991069462761766931}
   m_Layer: 12
   m_Name: Stylized Astronaut
   m_TagString: Untagged
@@ -1204,8 +1204,8 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!143 &4953571957254265530
-CharacterController:
+--- !u!136 &1307425950725672433
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1214,35 +1214,10 @@ CharacterController:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 0.2676
-  m_Radius: 0.07
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.125, z: -0.01}
---- !u!114 &4991069462761766931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4992175196469410334}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecb60a43404124c16b7da151afe1c536, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpForce: 10
-  speed: 20
-  turnSpeed: 100
-  sidewayControl: 20
-  gravity: 20
-  jump: {x: 0, y: 0, z: 0}
-  colliderBoxes:
-  - {fileID: 2476930171377573738}
-  - {fileID: 6816454227286587139}
+  m_Radius: 0.1
+  m_Height: 0.26543042
+  m_Direction: 1
+  m_Center: {x: 1.5353346e-10, y: 0.11760382, z: -3.6470826e-12}
 --- !u!54 &8045666848187038132
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1259,6 +1234,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4991069462761766931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4992175196469410334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecb60a43404124c16b7da151afe1c536, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turnSpeed: 100
+  jumpForce: 10
+  forwardForce: 100
+  colliderBoxes:
+  - {fileID: 2476930171377573738}
+  - {fileID: 6816454227286587139}
 --- !u!1 &4992175479913103710
 GameObject:
   m_ObjectHideFlags: 0
