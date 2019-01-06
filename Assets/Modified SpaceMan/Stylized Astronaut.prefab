@@ -56,6 +56,7 @@ GameObject:
   - component: {fileID: 8413900388921030225}
   - component: {fileID: 3444746721060077369}
   - component: {fileID: 2476930171377573738}
+  - component: {fileID: 5038196830782351398}
   m_Layer: 9
   m_Name: GroundCollider
   m_TagString: GroundCollider
@@ -139,6 +140,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5038196830782351398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4848844315251205809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99b855a385c4a4f18bdd6921cf6c27ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4990019569345470490
 GameObject:
   m_ObjectHideFlags: 0
@@ -1211,13 +1224,13 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4992175196469410334}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 53e94c9c1348d545abab052390c013a2, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.1
-  m_Height: 0.26543042
+  m_Radius: 0.072271325
+  m_Height: 0.27181247
   m_Direction: 1
-  m_Center: {x: 1.5353346e-10, y: 0.11760382, z: -3.6470826e-12}
+  m_Center: {x: -0.011431719, y: 0.11441277, z: -0.016296973}
 --- !u!54 &8045666848187038132
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1226,7 +1239,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4992175196469410334}
   serializedVersion: 2
-  m_Mass: 500
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -1247,8 +1260,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnSpeed: 100
-  jumpForce: 10
-  forwardForce: 10
+  jumpForce: 5000
+  forwardForce: 0.5
+  sidewaysForce: 1
   colliderBoxes:
   - {fileID: 2476930171377573738}
   - {fileID: 6816454227286587139}
