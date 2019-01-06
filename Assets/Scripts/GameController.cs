@@ -35,12 +35,10 @@ public class GameController : MonoBehaviour
     public void NewGame()
     {
         SceneManager.LoadScene(gameScene);
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
     public void GameOver()
     {
         SceneManager.LoadScene(gameOverScene);
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
