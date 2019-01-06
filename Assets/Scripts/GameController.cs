@@ -6,7 +6,7 @@ public class GameController : MonoBehaviour
 {
 
     private const string mainMenuScene = "MainMenu";
-    private const string level1Scene = "Level_1_terrain";
+    private const string gameScene = "Platform";
     private const string gameOverScene = "GameOver";
 
     public static GameController Instance;
@@ -34,7 +34,7 @@ public class GameController : MonoBehaviour
 
     public void NewGame()
     {
-        SceneManager.LoadScene(level1Scene);
+        SceneManager.LoadScene(gameScene);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
