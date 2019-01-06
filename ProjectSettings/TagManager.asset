@@ -6,6 +6,7 @@ TagManager:
   tags:
   - GroundCollider
   - HurtBox
+  - Platform
   layers:
   - Default
   - TransparentFX
