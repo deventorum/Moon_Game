@@ -10,7 +10,7 @@ public class Space_Daddy : MonoBehaviour {
     public float jumpForce;
     public float forwardForce;
     //private Vector3 moveDirection = Vector3.zero;
-
+    private Vector3 maxVelocity;
 
     public Collider[] colliderBoxes;
     private static readonly int AnimationPar = Animator.StringToHash("AnimationPar");
@@ -18,53 +18,95 @@ public class Space_Daddy : MonoBehaviour {
     private void Start ()
     {
         rb = GetComponent<Rigidbody>();
+        rb.freezeRotation = true;
         anim = GetComponentInChildren<Animator>();
     }
 
-    private void FixedUpdate (){
-    
+    private void FixedUpdate()
+    {
+        var currentForward = transform.forward;
+        var currentVelocity = new Vector3();
         groundedState = CheckGroundCollision(colliderBoxes[0]);
         CheckAttackCollision(colliderBoxes[1]);
-        Debug.Log(groundedState);
 
-        if (Input.GetAxis("Vertical") != 0)
+        Accelerate(maxVelocity, groundedState);
+
+
+        Jump(groundedState);
+
+
+
+
+
+
+
+
+
+        if (Input.GetAxis("Horizontal") != 0)
         {
-            //Debug.Log(Input.GetAxis("Vertical"));
-            anim.SetInteger(AnimationPar, 1);
-            rb.AddRelativeForce(0,0,forwardForce * Input.GetAxis("Vertical"), ForceMode.VelocityChange);
+            rb.constraints = RigidbodyConstraints.None;
+            currentVelocity = Turn(Input.GetAxis("Horizontal"), rb.velocity);
+            if (transform.forward != currentForward && groundedState)
+            {
+                rb.velocity -= currentVelocity / 10;
+                Accelerate(maxVelocity, groundedState);
+
+            }
         }
         else
         {
-            anim.SetInteger(AnimationPar, 0);
-            if (groundedState)
-            {
-                rb.AddRelativeForce(Vector3.zero);
-                rb.velocity = new Vector3(0,rb.velocity.y,0);
-                
-            }
+            rb.constraints = RigidbodyConstraints.FreezeRotationY;
         }
+
+
+
+
+
+
+
+
 
         if (Input.GetKeyDown("f") && !groundedState)
         {
             Flip();
         }
 
-        Jump(groundedState);
-        if (Input.GetAxis("Horizontal") != 0)
+    }
+
+    private void Accelerate(Vector3 maxVelocity, bool groundedState)
+    {
+        if (Input.GetAxis("Vertical") != 0)
         {
-            rb.constraints = RigidbodyConstraints.None;
-            Turn(Input.GetAxis("Horizontal"));
+            rb.isKinematic = false;
+            anim.SetInteger(AnimationPar, 1);
+            maxVelocity = transform.forward * forwardForce * 20;
+            if (Vector3.Distance(new Vector3(0,0,0), rb.velocity) < Vector3.Distance(new Vector3(0,0,0),maxVelocity ))
+            {
+                if (Input.GetAxis("Vertical") > 0)
+                {
+                    rb.velocity += transform.forward * forwardForce;
+                }
+                else
+                {
+                    rb.velocity += transform.forward * -forwardForce;
+                }
+            }
         }
         else
         {
-            rb.constraints = RigidbodyConstraints.FreezeRotationY;
+            anim.SetInteger(AnimationPar, 0);
+            if (!groundedState) return;
+            rb.isKinematic = true;
+            rb.velocity = new Vector3(0,rb.velocity.y,0);
         }
-       
+
+        
     }
 
-    private void Turn(float turn)
+    private Vector3 Turn(float turn, Vector3 v)
     {
         transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);
+        return v;
 
     }
     private void Flip()

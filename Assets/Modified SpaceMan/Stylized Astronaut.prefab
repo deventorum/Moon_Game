@@ -1174,7 +1174,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4992175196469410334}
   m_LocalRotation: {x: -0.024762137, y: 0.8948299, z: -0.05002874, w: -0.44290343}
-  m_LocalPosition: {x: -356.14, y: 0.48, z: 441.84}
+  m_LocalPosition: {x: -356.24, y: 0.48, z: 441.97}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 4995410141062503076}
@@ -1248,7 +1248,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turnSpeed: 100
   jumpForce: 10
-  forwardForce: 100
+  forwardForce: 10
   colliderBoxes:
   - {fileID: 2476930171377573738}
   - {fileID: 6816454227286587139}

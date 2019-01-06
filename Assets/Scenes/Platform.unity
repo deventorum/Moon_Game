@@ -1109,7 +1109,12 @@ PrefabInstance:
     - target: {fileID: 4991069462761766931, guid: 062d67dcc55d844e4b05c8b0e4d82ed3,
         type: 3}
       propertyPath: forwardForce
-      value: 10
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4991069462761766931, guid: 062d67dcc55d844e4b05c8b0e4d82ed3,
+        type: 3}
+      propertyPath: jumpForce
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1307425950725672433, guid: 062d67dcc55d844e4b05c8b0e4d82ed3,
         type: 3}
@@ -1142,6 +1147,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 13400000, guid: 53e94c9c1348d545abab052390c013a2,
         type: 2}
+    - target: {fileID: 1307425950725672433, guid: 062d67dcc55d844e4b05c8b0e4d82ed3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 062d67dcc55d844e4b05c8b0e4d82ed3, type: 3}
 --- !u!1001 &6076410001697761706
