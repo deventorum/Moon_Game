@@ -9,7 +9,6 @@ public class Platform : MonoBehaviour
 
         if (col.gameObject.tag == "Platform")
         {
-            Debug.Log(col.gameObject.tag);
             transform.parent.parent.parent = col.transform;
 
         }
@@ -19,7 +18,6 @@ public class Platform : MonoBehaviour
     {
         if (col.gameObject.tag == "Platform")
         {
-            Debug.Log("Exit");
             transform.parent.parent.parent = null;
 
         }

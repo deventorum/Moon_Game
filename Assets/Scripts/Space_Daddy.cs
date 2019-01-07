@@ -1,7 +1,5 @@
-using System;
 using UnityEngine;
 using TMPro;
-using UnityEngine.SceneManagement;
 
 public class Space_Daddy : MonoBehaviour
 {
