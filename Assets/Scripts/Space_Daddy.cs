@@ -14,8 +14,11 @@ public class Space_Daddy : MonoBehaviour
   private Vector3 maxVelocity;
   private Vector3 maxSideVelocity;
   private bool onPlatform;
+  
+  AudioSource audioData;
 
-  public int livesRemaining;
+
+    public int livesRemaining;
 
   public const int TOTAL_LIVES = 3;
 
@@ -24,12 +27,13 @@ public class Space_Daddy : MonoBehaviour
 
   private void Start()
   {
-
     livesRemaining = TOTAL_LIVES;
     rb = GetComponent<Rigidbody>();
     rb.freezeRotation = true;
     anim = GetComponentInChildren<Animator>();
-  }
+    audioData = GetComponent<AudioSource>(); 
+    
+    }
 
   private void Update()
   {
@@ -57,7 +61,7 @@ public class Space_Daddy : MonoBehaviour
     {
       rb.constraints = RigidbodyConstraints.None;
       currentVelocity = Turn(Input.GetAxis("Horizontal"), rb.velocity);
-      if ((transform.forward.x != currentForward.x || transform.forward.z != currentForward.z) && groundedState)
+    if ((transform.forward.x != currentForward.x || transform.forward.z != currentForward.z) && groundedState)
       {
         rb.velocity -= currentVelocity / 10;
         Accelerate(maxVelocity, groundedState, onPlatform);
@@ -91,7 +95,11 @@ public class Space_Daddy : MonoBehaviour
       //rb.isKinematic = false;
       anim.SetInteger(AnimationPar, 1);
       maxVelocity = transform.forward * forwardForce * 20;
-      if (platform)
+        if (!audioData.isPlaying)
+        {
+            audioData.Play(0);
+        }
+        if (platform)
       {
         maxVelocity *= 2;
       }
@@ -109,7 +117,8 @@ public class Space_Daddy : MonoBehaviour
     }
     else
     {
-      anim.SetInteger(AnimationPar, 0);
+        audioData.Pause();
+        anim.SetInteger(AnimationPar, 0);
       if (!groundedState) return;
       rb.isKinematic = true;
       rb.velocity = new Vector3(0, rb.velocity.y, 0);
