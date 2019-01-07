@@ -4,223 +4,246 @@ using UnityEngine.SceneManagement;
 
 public class Space_Daddy : MonoBehaviour
 {
-  private Animator anim;
-  private Rigidbody rb;
-  private float turnSpeed = 100.0f;
-  private bool groundedState;
-  private float jumpForce = 5000.0f;
-  private float forwardForce = 0.5f;
-  private float sidewaysForce = 1.0f;
-  private Vector3 maxVelocity;
-  private Vector3 maxSideVelocity;
-  private bool onPlatform;
+    private Animator anim;
+    private Rigidbody rb;
+    private float turnSpeed = 100.0f;
+    private bool groundedState;
+    private float jumpForce = 5000.0f;
+    private float forwardForce = 0.5f;
+    private float sidewaysForce = 1.0f;
+    private Vector3 maxVelocity;
+    private Vector3 maxSideVelocity;
+    private bool onPlatform;
 
-  public int livesRemaining;
+    public int livesRemaining;
+    public const int TOTAL_LIVES = 3;
+    public Vector3 origPosition;
 
-  public const int TOTAL_LIVES = 3;
+    public Collider[] colliderBoxes;
+    private static readonly int AnimationPar = Animator.StringToHash("AnimationPar");
+    public Vector3[] positions = {
+        new Vector3(-396.47f, 0.48f, 331.1f),
+        new Vector3(-396.47f, 0.48f, 298.1f),
+        new Vector3(-496.47f, 0.48f, 417.1f)
+    };
+    private int positionIndex;
 
-  public Collider[] colliderBoxes;
-  private static readonly int AnimationPar = Animator.StringToHash("AnimationPar");
-
-  private void Start()
-  {
-
-    livesRemaining = TOTAL_LIVES;
-    rb = GetComponent<Rigidbody>();
-    rb.freezeRotation = true;
-    anim = GetComponentInChildren<Animator>();
-  }
-
-  private void Update()
-  {
-    if (livesRemaining == 0)
+    private void Start()
     {
-      GameController.Instance.GameOver();
+
+        livesRemaining = TOTAL_LIVES;
+        positionIndex = 0;
+        transform.position = positions[positionIndex];
+        //origPosition = transform.position;
+        rb = GetComponent<Rigidbody>();
+        rb.freezeRotation = true;
+        anim = GetComponentInChildren<Animator>();
     }
-  }
 
-  private void FixedUpdate()
-  {
-    var currentForward = transform.forward;
-    var currentVelocity = new Vector3();
-    onPlatform = checkForPlatform(colliderBoxes[0]);
-    groundedState = CheckGroundCollision(colliderBoxes[0]);
-    CheckAttackCollision(colliderBoxes[1]);
-
-    midAirControl(maxSideVelocity, groundedState);
-
-    Accelerate(maxVelocity, groundedState, onPlatform);
-
-    Jump(groundedState);
-
-    if (Input.GetAxis("Horizontal") != 0)
+    private void Update()
     {
-      rb.constraints = RigidbodyConstraints.None;
-      currentVelocity = Turn(Input.GetAxis("Horizontal"), rb.velocity);
-      if ((transform.forward.x != currentForward.x || transform.forward.z != currentForward.z) && groundedState)
-      {
-        rb.velocity -= currentVelocity / 10;
+        if (livesRemaining == 0)
+        {
+            GameController.Instance.GameOver();
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        var currentForward = transform.forward;
+        var currentVelocity = new Vector3();
+        onPlatform = checkForPlatform(colliderBoxes[0]);
+        groundedState = CheckGroundCollision(colliderBoxes[0]);
+        CheckAttackCollision(colliderBoxes[1]);
+
+        midAirControl(maxSideVelocity, groundedState);
+
         Accelerate(maxVelocity, groundedState, onPlatform);
 
-      }
+        Jump(groundedState);
 
-    }
-    else
-    {
-      rb.constraints = RigidbodyConstraints.FreezeRotationY;
-    }
-
-
-    if (Input.GetKeyDown("f") && !groundedState)
-    {
-      Flip();
-    }
-
-  }
-
-  private bool checkForPlatform(Collider col)
-  {
-    Collider[] cols = Physics.OverlapBox(col.transform.position, col.transform.localScale / 2, Quaternion.identity, LayerMask.GetMask("Platform"));
-    return cols.Length > 0;
-  }
-
-  private void Accelerate(Vector3 maxVelocity, bool groundedState, bool platform)
-  {
-    if (Input.GetAxis("Vertical") != 0)
-    {
-      //rb.isKinematic = false;
-      anim.SetInteger(AnimationPar, 1);
-      maxVelocity = transform.forward * forwardForce * 20;
-      if (platform)
-      {
-        maxVelocity *= 2;
-      }
-      if (Vector3.Distance(new Vector3(0, 0, 0), rb.velocity) < Vector3.Distance(new Vector3(0, 0, 0), maxVelocity))
-      {
-        if (Input.GetAxis("Vertical") > 0)
+        if (Input.GetAxis("Horizontal") != 0)
         {
-          rb.velocity += transform.forward * forwardForce;
+            rb.constraints = RigidbodyConstraints.None;
+            currentVelocity = Turn(Input.GetAxis("Horizontal"), rb.velocity);
+            if ((transform.forward.x != currentForward.x || transform.forward.z != currentForward.z) && groundedState)
+            {
+                rb.velocity -= currentVelocity / 10;
+                Accelerate(maxVelocity, groundedState, onPlatform);
+
+            }
+
         }
         else
         {
-          rb.velocity += transform.forward * -forwardForce;
+            rb.constraints = RigidbodyConstraints.FreezeRotationY;
         }
-      }
+
+
+        if (Input.GetKeyDown("f") && !groundedState)
+        {
+            Flip();
+        }
+
     }
-    else
+
+    private bool checkForPlatform(Collider col)
     {
-      anim.SetInteger(AnimationPar, 0);
-      if (!groundedState) return;
-      rb.isKinematic = true;
-      rb.velocity = new Vector3(0, rb.velocity.y, 0);
-      rb.isKinematic = false;
+        Collider[] cols = Physics.OverlapBox(col.transform.position, col.transform.localScale / 2, Quaternion.identity, LayerMask.GetMask("Platform"));
+        return cols.Length > 0;
     }
 
-
-  }
-
-  private Vector3 Turn(float turn, Vector3 v)
-  {
-    transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);
-    return v;
-
-
-  }
-  private void Flip()
-  {
-
-    anim.Play("Flip");
-  }
-
-  private void midAirControl(Vector3 maxSideVelocity, bool onGround)
-  {
-    maxSideVelocity = transform.right * forwardForce * 20;
-    if (Vector3.Distance(new Vector3(0, 0, 0), rb.velocity) < Vector3.Distance(new Vector3(0, 0, 0), maxSideVelocity))
+    private void Accelerate(Vector3 maxVelocity, bool groundedState, bool platform)
     {
-      if (Input.GetKey("e"))
-      {
-        rb.velocity += transform.right * sidewaysForce;
-      }
-      else if (Input.GetKey("q"))
-      {
-        rb.velocity += transform.right * -sidewaysForce;
-      }
+        if (Input.GetAxis("Vertical") != 0)
+        {
+            //rb.isKinematic = false;
+            anim.SetInteger(AnimationPar, 1);
+            maxVelocity = transform.forward * forwardForce * 20;
+            if (platform)
+            {
+                maxVelocity *= 2;
+            }
+            if (Vector3.Distance(new Vector3(0, 0, 0), rb.velocity) < Vector3.Distance(new Vector3(0, 0, 0), maxVelocity))
+            {
+                if (Input.GetAxis("Vertical") > 0)
+                {
+                    rb.velocity += transform.forward * forwardForce;
+                }
+                else
+                {
+                    rb.velocity += transform.forward * -forwardForce;
+                }
+            }
+        }
+        else
+        {
+            anim.SetInteger(AnimationPar, 0);
+            if (!groundedState) return;
+            rb.isKinematic = true;
+            rb.velocity = new Vector3(0, rb.velocity.y, 0);
+            rb.isKinematic = false;
+        }
+
+
     }
 
-  }
-
-  private void Jump(bool isGrounded)
-  {
-    if (isGrounded)
+    private Vector3 Turn(float turn, Vector3 v)
     {
-      if (Input.GetKeyDown("space"))
-      {
-        //rb.isKinematic = false;
-        Debug.Log("isKinematic" + rb.isKinematic);
-        rb.AddForce(0, jumpForce * Time.deltaTime, 0, ForceMode.Impulse);
-        anim.Play("Jump_start");
-      }
+        transform.Rotate(0, turn * turnSpeed * Time.deltaTime, 0);
+        return v;
+
+
     }
-    else
+    private void Flip()
     {
-      if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Flip"))
-      {
-        anim.Play("Jump_loop");
-      }
 
+        anim.Play("Flip");
     }
-  }
 
-  private bool CheckGroundCollision(Collider col)
-  {
-    var transform1 = col.transform;
-    Collider[] cols = Physics.OverlapBox(transform1.position, transform1.localScale / 2, Quaternion.identity, LayerMask.GetMask("Terrain", "Base", "Platform"));
-    foreach (Collider c in cols)
+    private void midAirControl(Vector3 maxSideVelocity, bool onGround)
     {
-      Debug.Log(c.name + gameObject);
+        maxSideVelocity = transform.right * forwardForce * 20;
+        if (Vector3.Distance(new Vector3(0, 0, 0), rb.velocity) < Vector3.Distance(new Vector3(0, 0, 0), maxSideVelocity))
+        {
+            if (Input.GetKey("e"))
+            {
+                rb.velocity += transform.right * sidewaysForce;
+            }
+            else if (Input.GetKey("q"))
+            {
+                rb.velocity += transform.right * -sidewaysForce;
+            }
+        }
+
     }
 
-    if (cols.Length > 0 && !groundedState)
+    private void Jump(bool isGrounded)
     {
-      rb.velocity = new Vector3(0, rb.velocity.y, 0);
-      anim.Play("Jump_end");
+        if (isGrounded)
+        {
+            if (Input.GetKeyDown("space"))
+            {
+                //rb.isKinematic = false;
+                Debug.Log("isKinematic" + rb.isKinematic);
+                rb.AddForce(0, jumpForce * Time.deltaTime, 0, ForceMode.Impulse);
+                anim.Play("Jump_start");
+            }
+        }
+        else
+        {
+            if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Flip"))
+            {
+                anim.Play("Jump_loop");
+            }
+
+        }
     }
-    return cols.Length > 0;
-  }
 
-
-  private void CheckAttackCollision(Collider col)
-  {
-    var transform1 = col.transform;
-    Collider[] cols = Physics.OverlapBox(transform1.position, transform1.localScale / 2, Quaternion.identity, LayerMask.GetMask("Enemy"));
-    foreach (Collider c in cols)
+    private bool CheckGroundCollision(Collider col)
     {
-      Debug.Log("Attacked by fox");
+        var transform1 = col.transform;
+        Collider[] cols = Physics.OverlapBox(transform1.position, transform1.localScale / 2, Quaternion.identity, LayerMask.GetMask("Terrain", "Base", "Platform"));
+        foreach (Collider c in cols)
+        {
+            Debug.Log(c.name + gameObject);
+        }
+
+        if (cols.Length > 0 && !groundedState)
+        {
+            rb.velocity = new Vector3(0, rb.velocity.y, 0);
+            anim.Play("Jump_end");
+        }
+        return cols.Length > 0;
     }
-  }
 
-  private void OnDrawGizmosSelected()
-  {
-    Gizmos.color = Color.red;
-    var transform1 = transform;
-    Gizmos.DrawWireCube(transform1.position, transform1.localScale / 2);
-  }
 
-  protected void LateUpdate()
-  {
-    var transform1 = transform;
-    transform1.localEulerAngles = new Vector3(0, transform1.localEulerAngles.y, 0);
-  }
+    private void CheckAttackCollision(Collider other)
+    {
+        var transform1 = other.transform;
+        Collider[] cols = Physics.OverlapBox(
+            transform1.position,
+            transform1.localScale / 2,
+            Quaternion.identity,
+            LayerMask.GetMask("Enemy")
+        );
 
-  /** 
-   * Scene management is closely tied to the life of space daddy, so scene
-   * management is included here
-  */
+        if (cols.Length > 0)
+        {
+            // Since negative lives remaining trigger game over scene, 
+            // non-negative check for the same is not tested
+            livesRemaining--;
+            Respawn();
+        }
+    }
 
-  private void SceneController()
-  {
-    SceneManager.LoadScene("GameOver");
-  }
+    private void Respawn()
+    {
+        transform.position = positions[++positionIndex];
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        var transform1 = transform;
+        Gizmos.DrawWireCube(transform1.position, transform1.localScale / 2);
+    }
+
+    protected void LateUpdate()
+    {
+        var transform1 = transform;
+        transform1.localEulerAngles = new Vector3(0, transform1.localEulerAngles.y, 0);
+    }
+
+    /** 
+     * Scene management is closely tied to the life of space daddy, so scene
+     * management is included here
+    */
+
+    private void SceneController()
+    {
+        SceneManager.LoadScene("GameOver");
+    }
 
 }
 
