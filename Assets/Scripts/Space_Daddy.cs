@@ -15,7 +15,10 @@ public class Space_Daddy : MonoBehaviour
   private Vector3 maxSideVelocity;
   private bool onPlatform;
   
-  AudioSource audioData;
+  AudioSource movementAudio;
+  AudioSource landingAudio;
+  AudioSource damageAudio;
+  AudioSource goldAudio;
 
 
     public int livesRemaining;
@@ -31,8 +34,15 @@ public class Space_Daddy : MonoBehaviour
     rb = GetComponent<Rigidbody>();
     rb.freezeRotation = true;
     anim = GetComponentInChildren<Animator>();
-    audioData = GetComponent<AudioSource>(); 
-    
+
+
+        AudioSource[] audios = GetComponents<AudioSource>();
+        movementAudio = audios[0];
+        landingAudio = audios[1];
+        damageAudio = audios[2];
+        goldAudio = audios[3];
+
+
     }
 
   private void Update()
@@ -55,7 +65,12 @@ public class Space_Daddy : MonoBehaviour
 
     Accelerate(maxVelocity, groundedState, onPlatform);
 
-    Jump(groundedState);
+        if (movementAudio.isPlaying && !groundedState)
+        {
+            movementAudio.Pause();
+        }
+
+        Jump(groundedState);
 
     if (Input.GetAxis("Horizontal") != 0)
     {
@@ -95,9 +110,9 @@ public class Space_Daddy : MonoBehaviour
       //rb.isKinematic = false;
       anim.SetInteger(AnimationPar, 1);
       maxVelocity = transform.forward * forwardForce * 20;
-        if (!audioData.isPlaying)
+        if (!movementAudio.isPlaying && groundedState)
         {
-            audioData.Play(0);
+            movementAudio.Play(0);
         }
         if (platform)
       {
@@ -117,7 +132,7 @@ public class Space_Daddy : MonoBehaviour
     }
     else
     {
-        audioData.Pause();
+        movementAudio.Pause();
         anim.SetInteger(AnimationPar, 0);
       if (!groundedState) return;
       rb.isKinematic = true;
@@ -190,9 +205,10 @@ public class Space_Daddy : MonoBehaviour
     }
 
     if (cols.Length > 0 && !groundedState)
-    {
-      rb.velocity = new Vector3(0, rb.velocity.y, 0);
-      anim.Play("Jump_end");
+    {   
+        landingAudio.Play(0);
+        rb.velocity = new Vector3(0, rb.velocity.y, 0);
+        anim.Play("Jump_end");
     }
     return cols.Length > 0;
   }
@@ -205,7 +221,11 @@ public class Space_Daddy : MonoBehaviour
     foreach (Collider c in cols)
     {
       Debug.Log("Attacked by fox");
-    }
+            if (!damageAudio.isPlaying)
+            {
+                damageAudio.Play(0);
+            }
+        }
   }
 
   private void OnDrawGizmosSelected()
