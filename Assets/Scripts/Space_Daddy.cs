@@ -46,7 +46,7 @@ public class Space_Daddy : MonoBehaviour
 
     private void Update()
     {
-        if (livesRemaining <= 0)
+        if (livesRemaining <= 0 || Input.GetKey("l"))
         {
             PlayerPrefs.SetInt("final_score", FindObjectOfType<GameManager>().GetCurrentGold());
             GameController.Instance.GameOver();
