@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
-using UnityEngine.UI;
 public class PantherAi : MonoBehaviour
 {
 
@@ -26,7 +23,6 @@ public class PantherAi : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         trans = new GameObject().transform;
         t = Player.GetComponent<Transform>();
-        Debug.Log(t.position);
         animator = GetComponent<Animator>();
     }
 
@@ -59,11 +55,6 @@ public class PantherAi : MonoBehaviour
         {
             rb.constraints = RigidbodyConstraints.FreezeAll;
         }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.Log($"Attacked {other.name}");
     }
 
     private void MoveTowards()

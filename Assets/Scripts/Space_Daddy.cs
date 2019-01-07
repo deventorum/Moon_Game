@@ -37,6 +37,7 @@ public class Space_Daddy : MonoBehaviour
     {
 
         livesRemaining = TOTAL_LIVES;
+        hudLivesText.text = "Lives: " + livesRemaining;
         positionIndex = 0;
         transform.position = positions[positionIndex];
 
@@ -49,6 +50,7 @@ public class Space_Daddy : MonoBehaviour
     {
         if (livesRemaining == 0)
         {
+            PlayerPrefs.SetInt("final_score", FindObjectOfType<GameManager>().GetCurrentGold());
             GameController.Instance.GameOver();
         }
     }
@@ -169,8 +171,6 @@ public class Space_Daddy : MonoBehaviour
         {
             if (Input.GetKeyDown("space"))
             {
-                //rb.isKinematic = false;
-                Debug.Log("isKinematic" + rb.isKinematic);
                 rb.AddForce(0, jumpForce * Time.deltaTime, 0, ForceMode.Impulse);
                 anim.Play("Jump_start");
             }
@@ -188,17 +188,19 @@ public class Space_Daddy : MonoBehaviour
     private bool CheckGroundCollision(Collider col)
     {
         var transform1 = col.transform;
-        Collider[] cols = Physics.OverlapBox(transform1.position, transform1.localScale / 2, Quaternion.identity, LayerMask.GetMask("Terrain", "Base", "Platform"));
-        foreach (Collider c in cols)
-        {
-            Debug.Log(c.name + gameObject);
-        }
+        Collider[] cols = Physics.OverlapBox(
+            transform1.position, 
+            transform1.localScale / 2, 
+            Quaternion.identity, 
+            LayerMask.GetMask("Terrain", "Base", "Platform")
+        );
 
         if (cols.Length > 0 && !groundedState)
         {
             rb.velocity = new Vector3(0, rb.velocity.y, 0);
             anim.Play("Jump_end");
         }
+
         return cols.Length > 0;
     }
 
@@ -225,7 +227,10 @@ public class Space_Daddy : MonoBehaviour
 
     private void Respawn()
     {
-        transform.position = positions[++positionIndex];
+        if (positionIndex < 2)
+        {
+            transform.position = positions[++positionIndex];
+        }
     }
 
     private void OnDrawGizmosSelected()
