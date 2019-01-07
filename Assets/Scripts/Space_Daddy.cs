@@ -17,7 +17,7 @@ public class Space_Daddy : MonoBehaviour
     AudioSource movementAudio;
     AudioSource landingAudio;
     AudioSource damageAudio;
-    AudioSource goldAudio;
+
 
     private int livesRemaining;
     public const int TOTAL_LIVES = 3;
@@ -53,7 +53,6 @@ public class Space_Daddy : MonoBehaviour
         movementAudio = audios[0];
         landingAudio = audios[1];
         damageAudio = audios[2];
-        goldAudio = audios[3];
     }
 
 

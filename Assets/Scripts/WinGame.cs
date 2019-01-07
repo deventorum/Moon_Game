@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class WinGame : MonoBehaviour
 {
+    AudioSource winningAudio;
     // Start is called before the first frame update
     void Start()
     {
-        
+        winningAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -19,8 +22,13 @@ public class WinGame : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            PlayerPrefs.SetInt("final_score", FindObjectOfType<GameManager>().GetCurrentGold());
-            GameController.Instance.GameOver();
+            winningAudio.Play(0);
+            Invoke("GameCompleted", 3f);
         }
+    }
+    private void GameCompleted()
+    {
+        PlayerPrefs.SetInt("final_score", FindObjectOfType<GameManager>().GetCurrentGold());
+        GameController.Instance.GameOver();
     }
 }
