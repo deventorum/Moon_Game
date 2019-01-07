@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using TMPro;
 using UnityEngine.SceneManagement;
 
 public class Space_Daddy : MonoBehaviour
@@ -15,18 +16,23 @@ public class Space_Daddy : MonoBehaviour
     private Vector3 maxSideVelocity;
     private bool onPlatform;
 
-    public int livesRemaining;
+    private int livesRemaining;
     public const int TOTAL_LIVES = 3;
     public Vector3 origPosition;
 
     public Collider[] colliderBoxes;
     private static readonly int AnimationPar = Animator.StringToHash("AnimationPar");
+
+    // Predetermined spawn location coordinates for spaceman
     public Vector3[] positions = {
         new Vector3(-396.47f, 0.48f, 331.1f),
         new Vector3(-396.47f, 0.48f, 298.1f),
         new Vector3(-496.47f, 0.48f, 417.1f)
     };
+
     private int positionIndex;
+    public TextMeshProUGUI hudLivesText;
+
 
     private void Start()
     {
@@ -213,6 +219,7 @@ public class Space_Daddy : MonoBehaviour
             // Since negative lives remaining trigger game over scene, 
             // non-negative check for the same is not tested
             livesRemaining--;
+            hudLivesText.text = "Lives: " + livesRemaining;
             Respawn();
         }
     }
