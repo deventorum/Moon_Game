@@ -46,7 +46,7 @@ public class Space_Daddy : MonoBehaviour
 
     private void Update()
     {
-        if (livesRemaining == 0)
+        if (livesRemaining <= 0)
         {
             PlayerPrefs.SetInt("final_score", FindObjectOfType<GameManager>().GetCurrentGold());
             GameController.Instance.GameOver();
@@ -217,7 +217,11 @@ public class Space_Daddy : MonoBehaviour
         {
             // Since negative lives remaining trigger game over scene, 
             // non-negative check for the same is not tested
-            livesRemaining--;
+            if (livesRemaining > 0)
+            {
+                livesRemaining--;
+            }
+
             hudLivesText.text = "Lives: " + livesRemaining;
             Respawn();
         }
