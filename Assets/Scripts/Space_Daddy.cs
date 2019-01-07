@@ -33,14 +33,13 @@ public class Space_Daddy : MonoBehaviour
     private int positionIndex;
     public TextMeshProUGUI hudLivesText;
 
-
     private void Start()
     {
 
         livesRemaining = TOTAL_LIVES;
         positionIndex = 0;
         transform.position = positions[positionIndex];
-        //origPosition = transform.position;
+
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
         anim = GetComponentInChildren<Animator>();
@@ -241,17 +240,6 @@ public class Space_Daddy : MonoBehaviour
         var transform1 = transform;
         transform1.localEulerAngles = new Vector3(0, transform1.localEulerAngles.y, 0);
     }
-
-    /** 
-     * Scene management is closely tied to the life of space daddy, so scene
-     * management is included here
-    */
-
-    private void SceneController()
-    {
-        SceneManager.LoadScene("GameOver");
-    }
-
 }
 
 

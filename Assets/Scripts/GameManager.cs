@@ -1,12 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
     public int currentGold;
-    public Text goldText;
+    public TextMeshProUGUI goldText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +17,7 @@ public class GameManager : MonoBehaviour
     {
         
     }
+
     public void AddGold(int goldToAdd)
     {
         currentGold += goldToAdd;
