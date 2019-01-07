@@ -14,6 +14,11 @@ public class Space_Daddy : MonoBehaviour
     private Vector3 maxSideVelocity;
     private bool onPlatform;
 
+    AudioSource movementAudio;
+    AudioSource landingAudio;
+    AudioSource damageAudio;
+    AudioSource goldAudio;
+
     private int livesRemaining;
     public const int TOTAL_LIVES = 3;
     public Vector3 origPosition;
@@ -32,6 +37,7 @@ public class Space_Daddy : MonoBehaviour
     public TextMeshProUGUI hudLivesText;
 
     private void Start()
+
     {
 
         livesRemaining = TOTAL_LIVES;
@@ -42,7 +48,14 @@ public class Space_Daddy : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
         anim = GetComponentInChildren<Animator>();
+
+        AudioSource[] audios = GetComponents<AudioSource>();
+        movementAudio = audios[0];
+        landingAudio = audios[1];
+        damageAudio = audios[2];
+        goldAudio = audios[3];
     }
+
 
     private void Update()
     {
@@ -62,8 +75,12 @@ public class Space_Daddy : MonoBehaviour
         CheckAttackCollision(colliderBoxes[1]);
 
         midAirControl(maxSideVelocity, groundedState);
-
         Accelerate(maxVelocity, groundedState, onPlatform);
+
+        if (movementAudio.isPlaying && !groundedState)
+        {
+            movementAudio.Pause();
+        }
 
         Jump(groundedState);
 
@@ -101,10 +118,16 @@ public class Space_Daddy : MonoBehaviour
     private void Accelerate(Vector3 maxVelocity, bool groundedState, bool platform)
     {
         if (Input.GetAxis("Vertical") != 0)
+
         {
             //rb.isKinematic = false;
             anim.SetInteger(AnimationPar, 1);
             maxVelocity = transform.forward * forwardForce * 20;
+
+            if (!movementAudio.isPlaying && groundedState)
+            {
+                movementAudio.Play(0);
+            }
             if (platform)
             {
                 maxVelocity *= 2;
@@ -123,14 +146,13 @@ public class Space_Daddy : MonoBehaviour
         }
         else
         {
+            movementAudio.Pause();
             anim.SetInteger(AnimationPar, 0);
             if (!groundedState) return;
             rb.isKinematic = true;
             rb.velocity = new Vector3(0, rb.velocity.y, 0);
             rb.isKinematic = false;
         }
-
-
     }
 
     private Vector3 Turn(float turn, Vector3 v)
@@ -187,14 +209,15 @@ public class Space_Daddy : MonoBehaviour
     {
         var transform1 = col.transform;
         Collider[] cols = Physics.OverlapBox(
-            transform1.position, 
-            transform1.localScale / 2, 
-            Quaternion.identity, 
+            transform1.position,
+            transform1.localScale / 2,
+            Quaternion.identity,
             LayerMask.GetMask("Terrain", "Base", "Platform")
         );
 
         if (cols.Length > 0 && !groundedState)
         {
+            landingAudio.Play(0);
             rb.velocity = new Vector3(0, rb.velocity.y, 0);
             anim.Play("Jump_end");
         }
@@ -213,10 +236,15 @@ public class Space_Daddy : MonoBehaviour
             LayerMask.GetMask("Enemy")
         );
 
+
+
         if (cols.Length > 0)
         {
-            // Since negative lives remaining trigger game over scene, 
-            // non-negative check for the same is not tested
+            if (!damageAudio.isPlaying)
+            {
+                damageAudio.Play(0);
+            }
+
             if (livesRemaining > 0)
             {
                 livesRemaining--;
@@ -226,6 +254,7 @@ public class Space_Daddy : MonoBehaviour
             Respawn();
         }
     }
+
 
     private void Respawn()
     {
@@ -241,6 +270,7 @@ public class Space_Daddy : MonoBehaviour
         var transform1 = transform;
         Gizmos.DrawWireCube(transform1.position, transform1.localScale / 2);
     }
+
 
     protected void LateUpdate()
     {
