@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - GroundCollider
+  - HurtBox
+  - Platform
+  - Gold
   layers:
   - Default
   - TransparentFX
@@ -14,12 +18,12 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - HitBox
+  - Terrain
+  - Base
+  - Player
+  - Enemy
+  - Platform
   - 
   - 
   - 
