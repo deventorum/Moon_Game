@@ -40,4 +40,8 @@ public class GameController : MonoBehaviour
     {
         SceneManager.LoadScene(gameOverScene);
     }
+    public void QuitButton()
+    {
+        Application.Quit();
+    }
 }
