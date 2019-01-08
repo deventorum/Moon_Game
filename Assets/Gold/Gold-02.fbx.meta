@@ -1,17 +1,14 @@
 fileFormatVersion: 2
-guid: 3874a7ceed7b14eb7a87b642646c24c4
+guid: bb1266f47f667436d8563a1690c30727
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: metal
-    2100002: _defaultMat
-    2100004: pipe
-    2100006: glass
+    2100000: 04 - Default
     2300000: //RootNode
     3300000: //RootNode
-    4300000: spaceCraft6_8angles
+    4300000: Gold-02
   externalObjects: {}
   materials:
     importMaterials: 1

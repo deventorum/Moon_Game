@@ -6,6 +6,8 @@ TagManager:
   tags:
   - GroundCollider
   - HurtBox
+  - Platform
+  - Gold
   layers:
   - Default
   - TransparentFX
@@ -20,8 +22,8 @@ TagManager:
   - Terrain
   - Base
   - Player
-  - 
-  - 
+  - Enemy
+  - Platform
   - 
   - 
   - 
