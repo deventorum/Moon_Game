@@ -16,4 +16,4 @@ Survival game built with Unity 3D and &lt;3. All scripts written in C#.
 <img src="https://github.com/deventorum/Moon_Game/blob/master/Docs/Screen%20Shot%202019-01-09%20at%2011.44.25%20AM.png" />
 
 ### Game Over Screen
-<img src="https://github.com/deventorum/Moon_Game/blob/master/Docs/Screen%20Shot%202019-01-09%20at%2011.45.28%20AM.png" />
+<img src="https://github.com/deventorum/Moon_Game/blob/master/Docs/game-over-rev_1.png" />
